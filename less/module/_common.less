@@ -1,0 +1,93 @@
+// body
+body {
+  font-size: 100%;
+  font-family: "Noto Snas Japanese", sans-serif;
+  color: @base-font-color;
+  background: @background-color;
+  margin: 0;
+  letter-spacing: 1px;
+  @media @viewport-580 {
+    font-size: 87.5%; // 14px
+  }
+}
+// typography
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  line-height: 1.2;
+  color: @base-font-darken;
+  .keyword {
+    color: @base-font-darken;
+  }
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 28px auto 8px;
+  font-weight: normal;
+}
+h1 {
+  font-size: 1.5em;
+  font-weight: bold;
+} 
+h2 {
+  font-size: 1.5em;
+}
+h3 {
+  font-size: 1.25em;
+  font-weight: bold;
+}
+h4 {
+  font-size: 1.25em;
+}
+h5 {
+  font-size: 1em;
+  font-weight: bold;
+}
+h6 {
+  font-size: 1em;
+}
+p {
+  font-size: 1em;
+  line-height: 1.7;
+  margin: 0 auto 1em;
+}
+// links
+a {
+  color: @theme-color;
+  text-decoration: none;
+  &:hover {
+    color: @theme-color;
+    text-decoration: underline;
+  }
+  &:visited { color: @theme-color-darken; }
+  &:focus { color: @theme-color-darken; }
+  &:active { color: @theme-color-darken; }
+}
+// hr
+hr {
+  margin: 2em auto;
+  border-width: 0;
+  border-top: 1px solid @line-color;
+}
+// iframe
+iframe {
+  margin: 0 auto 1em;
+}
+
+// containerは1番大きなdivで全ての箱である
+#container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+#content-inner {
+  width: 960px;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  @media @viewport-970 {
+    display: block;
+    width: 100%;
+    max-width: 650px;
+  }
+}

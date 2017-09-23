@@ -1,0 +1,177 @@
+// entry1つで1つのModule（少し括りが大きいので場合によっては分けてもよい）
+// entry-header・編集ボタン・entry-contentに分けられている
+#wrapper {
+  width: 650px;
+  @media @viewport-970 {
+    width: 100%;
+    max-width: 650px;
+  }
+}
+.entry,
+.archive-entry {
+  margin: 0 auto 74px;
+}
+
+//entry header {{{
+.entry-title {
+  font-size: 1.5em;
+  font-weight: normal;
+  text-align: left;
+  letter-spacing: 2px;
+  margin: 0 auto 28px;
+  a {
+    color: @base-font-darken;
+    &:hover {
+      text-decoration: none;
+      color: @base-font-darken;
+    }
+    &:visited {
+      color: @base-font-darken;
+    }
+  }
+}
+.entry-date {
+  font-family: "Avenir", "Helvetica", sans-serif;
+  font-size: .75em;
+  font-weight: bold;
+  text-align: left;
+    a {
+    color: @base-font-lighten;
+    &:hover {
+      color: @base-font-lighten;
+      text-decoration: none;
+    }
+    &:visited {
+      color: @base-font-lighten;
+    }
+  }
+}
+.categories {
+  font-size: .75em;
+  text-align: right;
+  position: absolute;
+  top: 45px;
+  right: 0;
+  a {
+    color: @base-font-lighten;
+    font-size: ..875em;
+    margin-left: 6px;
+    &:hover {
+      color: @base-font-lighten;
+      text-decoration: none;;
+    }
+    // tag付ける
+    &:before {
+      content: "#";
+    }
+  }
+}
+// }}}
+
+// 編集ボタン {{{
+.entry-header-menu {
+  position: absolute;
+  top: 10px;
+  right: -60px;
+  a {
+    font-size: .75em;
+    padding: 4px 8px;
+  }
+}
+/// }}}
+
+// entry content {{{
+.entry-content {
+  margin: 0 auto 38px;
+  border-bottom: 1px solid @line-color;
+  // fotolife
+  .hatena-fotolife {
+    .border-radius(3px);
+  }
+  .hatena-image-left,
+  .hatena-image-right {
+    margin-right: .875em;
+  }
+  // list
+  ul, ol {
+    font-size: 1em;
+    line-height: 1.7;
+    padding-left: 10px;
+    margin: 0 auto 1em;
+    p {
+      margin: 0 auto;
+    }
+  }
+  // table
+  table {
+    font-size: 1em;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 24px auto;
+    width: 100%;
+  }
+  tr {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    &:hover{
+      background: @background-color;
+    }
+  }
+  th {
+    background: @background-color;
+    font-weight: bold;
+    border: 1px solid @line-color;
+    padding: 5px 10px;
+  }
+  td {
+    border: 1px solid @line-color;
+    padding: 5px 10px;
+  }
+  // blockquote
+  blockquote {
+    border: 1px solid @line-color;
+    background: @fff;
+    padding: 1.5em;
+    margin: 28px auto;
+    .border-radius(3px);
+    &>blockquote {
+      border: none;
+      border-left: 2px solid @line-color;
+      padding: 0 0 0 1em;
+    }
+  }
+  // code
+  .code {
+    font-size: .875em;
+    line-height: 1.7;
+    background: @fff;
+    margin: 28px auto;
+    padding: 1.5em;
+    border: 1px solid @line-color;
+    .border-radius(3px);
+    overflow: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  code {
+    font-size: .875em;
+    background: @fff;
+    border: 1px solid @line-color;
+    padding: 3px 5px;
+  }
+  // asin
+  .hatena-asin-detail,
+  .itunes-embed,
+  .embed-wrapper {
+    .border-radius(3px);
+    margin: 28px auto;
+    padding: 1.5em;
+    background-color: @fff;
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+// }}}

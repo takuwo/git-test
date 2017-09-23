@@ -1,0 +1,59 @@
+.comment-box {
+  position: relative;
+  margin: 38px auto;
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    padding: 24px 0 24px 50px;
+    position: relative;
+    border-bottom: 1px solid @line-color;
+    &:first-child {
+      border-top: 1px solid @line-color;
+    }
+  }
+  // icon画像を40pxで表示し左寄せ
+  .hatena-id-icon {
+    position: absolute;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    .border-radius(2px);
+  }
+  .comment-user-name {
+    line-height: 1;
+    margin: 0 auto 10px;
+  }
+  .comment-content p {
+    font-size: .93em;
+    line-height: 1.5;
+    margin: 10px auto;
+    a {
+      word-wrap: break-word;
+    }
+  }
+  .comment-metadata {
+    margin: 0 auto;
+  }
+  .read-more-comments {
+    padding-left: 0;
+  }
+}
+.leave-comment-title {
+  display: block;
+  width: 100px;
+  font-size: 1em;
+  text-align: center;
+  line-height: 1;
+  cursor: pointer;
+  background: @background-color;
+  margin: 24px 0;
+  padding: 10px;
+  .border-radius(2px);
+  &:hover {
+    background: @theme-color;
+    color: @fff;
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,24 @@
+// Hatena Blogのだいたいの構成は以下
+// container > container-inner > blog-title
+//                             > content > content-inner > wrapper > main > main-inner > entry > entry-inner > entry-heade - entry-content
+//                                                       > box2
+
+// library
+@import 'lib/_normalize';
+@import 'lib/_color';
+@import 'lib/_notosansjapanese.less';
+@import 'lib/_responsive';
+@import 'lib/_mixin';
+// module
+@import 'module/_header';
+@import 'module/_footer.less';
+@import 'module/_common'; // blogの全体のcss
+@import 'module/_entry';
+@import 'module/_box2'; // sidebar
+@import 'module/_pager';
+@import 'module/_comment';
+@import 'module/_social'; // keyword,comment,hatena-star,social-buttons
+// page
+@import 'page/_about';
+@import 'page/_archives';
+@import 'page/_404.less';
