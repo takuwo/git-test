@@ -4,23 +4,20 @@ var gulp = require('gulp'),
 
 var lessDir = './less/';
 var cssDir = './css/';
-var dropboxDir = '../../Dropbox/Public/hatena-blog-themes/';
 
 var themeName = 'nokoto';
 
 gulp.task('less', function() {
     var lessPath = lessDir + themeName +'.less';
     var cssPath = cssDir;
-    var dropboxPath = dropboxDir + themeName + '/';
 
-    return gulp.src(lessPath)
-        .pipe(less({compress: true}))
-        .pipe(gulp.dest(cssPath))
-        .pipe(autoprefixer({
-          browsers: ['last 2 version', 'iOS >= 8.1', 'Android >= 4.4'],
-          cascade: false
-        }))
-        .pipe(gulp.dest(dropboxPath));
+    return gulp.src('lessPath')
+      .pipe(less({compress: false}))
+      .pipe(gulp.dest(cssPath))
+      .pipe(autoprefixer({
+        browsers: ['last 2 version', 'iOS >= 8.1', 'Android >= 4.4'],
+        cascade: false
+      }));
 });
 
 gulp.task('default', function () {
@@ -29,4 +26,3 @@ gulp.task('default', function () {
         ['less']
     );
 });
-
