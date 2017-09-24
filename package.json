@@ -1,0 +1,25 @@
+{
+  "name": "nokoto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/takuwo/nokoto.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/takuwo/nokoto/issues"
+  },
+  "homepage": "https://github.com/takuwo/nokoto#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-less": "^3.3.2",
+    "gulp-plumber": "^1.1.0"
+  }
+}

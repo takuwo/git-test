@@ -1,19 +1,26 @@
 // vender-prefix
-// .border-radius(@radius) {
-//   -webkit-border-radius: @radius;
-//   -moz-border-radius: @radius;
-//   border-radius: @radius;
-// }
-// .box-shadow(@shadow) {
-//   -webkit-box-shadow: @shadow;
-//   -moz-box-shadow: @shadow;
-//   box-shadow: @shadow;
-// }
-// .transform(@v) {
-//   -wibkit-transform: @v;
-//   -ms-transform: @v;
-//   transform: @v;
-// }
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+.box-shadow(@shadow) {
+  -webkit-box-shadow: @shadow;
+  -moz-box-shadow: @shadow;
+  box-shadow: @shadow;
+}
+.transform(@v) {
+  -wibkit-transform: @v;
+  -ms-transform: @v;
+  transform: @v;
+}
+
+// box-sizing
+.box-sizing() {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
 // vertical aligna
 .vertical-align() {
@@ -23,12 +30,6 @@
   .transform(translateY(-(@middle)));
 }
 
-// box-sizing
-.box-sizing() {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
 
 // micro clearfix
 .clearfix {
