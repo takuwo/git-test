@@ -1,22 +1,32 @@
 // サイドバーのless
 #box2-inner {
-  width: 240px;
-  @media @viewport-970 {
-    .clearfix();
-    margin: auto -30px;
-  }
-  @media @viewport-580 {
-    margin: auto;
+
+width: 240px;
+@media @viewport-970 {
+  .clearfix();
+  width: auto;
+  margin: auto -20px;
+}
+@media @viewport-580 {
+  margin: auto;
+}
+
+a {
+  color: @base-font-darken;
+  text-decoration: none;
+  &:hover {
+    color: @base-font-darken;
+    text-decoration: underline;
   }
 }
 .hatena-module {
   vertical-align: top;
   margin: 0 auto 38px;
-  .box-sizing();
+  box-sizing: border-box;
   @media @viewport-970 {
     float: left;
     width: 50%;
-    padding: 0 30px;
+    padding: 0 20px;
     &:nth-child(odd) {
       clear: both;
     }
@@ -24,42 +34,44 @@
   @media @viewport-580 {
     float: none;
     width: 100%;
-    padding: 0 20px;
   }
 }
 .hatena-module-title {
-  font-size: 1.071em;
+  font-size: 1em;
   font-weight: bold;
   line-height: 1.2;
   color: @base-font-darken;
   margin-bottom: 10px;
-  a {
-    color: @base-font-darken;
-    &:hover {
-      color: @base-font-darken;
-      text-decoration: underline;
+}
+.hatena-module-body p {
+  line-height: 1.6;
+}
+.hatena-urllist {
+  padding-left: 0;
+  margin: 0 auto 14px;
+  li {
+    list-style: none;
+    font-size: .8em;
+    line-height: 1.8;
+    .urllist-title-link {
+      font-size: 100%;
     }
   }
 }
-.hatena-module-body p {
-  line-height: 1.5
-}
-ul {
-  padding-left: 0;
-  margin: 0 auto 14px;
-}
-li {
-  border-bottom: 1px solid @line-color;
-  padding: 10px 0;
-  list-style: none;
-  line-height: 1.5;
-  .urllist-title-link {
-    font-size: 100%;
-  }
+.profile-icon-link {
+  float: left;
+  width: 50px;
+  margin: 0 0 10px; 
 }
 .profile-icon {
   display: inline-block;
-  .border-radius(64px);
+  border-radius: 50%
+}
+.id {
+  float: right;
+  width: calc(~'100% - 60px');
+  margin: 0 0 10px;
+  font-size: .9em;
 }
 .search-form {
   width: 100%;
@@ -67,13 +79,13 @@ li {
   position: relative;
 }
 .search-module-input {
-  .border-radius(2px);
+  border-radius: 2px;
   border: 1px solid @line-color;
   width: 100%;
   padding: 2px 0 2px 4px;
   .box-sizing();
   &:hover {
-    border: 1px solid @theme-color;
+    border: 1px solid @base-font-color;
   }
   &:focus {
     outline: none;
@@ -89,11 +101,14 @@ li {
   margin: auto;
   right: 14px;
   border: none;
-  background: url("./images/saerch.png") 50% 50% no-repeat;
+  background: url("http://blog.hatena.ne.jp/images/theme/search@2x.png") no-repeat right center;
+  background-size: 20px 20px;
   text-indent: -999px;
   cursor: pointer;
   opacity: 0.4;
   &:hover {
     opacity: .8;
   }
+}
+
 }

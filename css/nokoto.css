@@ -1,3 +1,5 @@
+/* Responsive: yes */
+/*@import "http://fonts.googleapis.com/earlyaccess/notosansjapanese.css";*/
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -450,7 +452,7 @@ textarea {
 }
 #title a {
   text-decoration: none;
-  color: #747272;
+  color: #222;
 }
 #blog-description {
   font-size: .875em;
@@ -461,7 +463,7 @@ textarea {
 }
 #footer-inner {
   text-align: center;
-  font-size: .93em;
+  font-size: .65em;
 }
 .services {
   line-height: 1;
@@ -469,7 +471,7 @@ textarea {
 body {
   font-size: 100%;
   font-family: "Noto Snas Japanese", sans-serif;
-  color: #747272;
+  color: #3a3939;
   background: #fcfcfc;
   margin: 0;
   letter-spacing: 1px;
@@ -487,7 +489,7 @@ h5,
 h6 {
   font-weight: bold;
   line-height: 1.2;
-  color: #413f3f;
+  color: #222;
 }
 h1 .keyword,
 h2 .keyword,
@@ -495,7 +497,7 @@ h3 .keyword,
 h4 .keyword,
 h5 .keyword,
 h6 .keyword {
-  color: #413f3f;
+  color: #222;
 }
 h1,
 h2,
@@ -533,21 +535,21 @@ p {
   margin: 0 auto 1em;
 }
 a {
-  color: #0aaadc;
+  color: #189BC6;
   text-decoration: none;
 }
 a:hover {
-  color: #0aaadc;
+  color: #189BC6;
   text-decoration: underline;
 }
 a:visited {
-  color: #065f7a;
+  color: #0d546b;
 }
 a:focus {
-  color: #065f7a;
+  color: #0d546b;
 }
 a:active {
-  color: #065f7a;
+  color: #0d546b;
 }
 hr {
   margin: 2em auto;
@@ -594,18 +596,18 @@ iframe {
   font-size: 1.5em;
   font-weight: bold;
   text-align: left;
-  letter-spacing: 2px;
-  margin: 0 auto 28px;
+  letter-spacing: 1px;
+  margin: 5px auto 28px;
 }
 .entry-title a {
-  color: #413f3f;
+  color: #222;
 }
 .entry-title a:hover {
   text-decoration: none;
-  color: #413f3f;
+  color: #222;
 }
 .entry-title a:visited {
-  color: #413f3f;
+  color: #222;
 }
 .entry-date {
   font-family: "Avenir", "Helvetica", sans-serif;
@@ -614,14 +616,14 @@ iframe {
   text-align: left;
 }
 .entry-date a {
-  color: #a7a5a5;
+  color: #888;
 }
 .entry-date a:hover {
-  color: #a7a5a5;
+  color: #888;
   text-decoration: none;
 }
 .entry-date a:visited {
-  color: #a7a5a5;
+  color: #888;
 }
 .categories {
   font-size: .75em;
@@ -631,12 +633,12 @@ iframe {
   right: 0;
 }
 .categories a {
-  color: #a7a5a5;
+  color: #888;
   font-size: ..875em;
   margin-left: 6px;
 }
 .categories a:hover {
-  color: #a7a5a5;
+  color: #888;
   text-decoration: none;
 }
 .categories a:before {
@@ -653,6 +655,7 @@ iframe {
 }
 .entry-content {
   margin: 0 auto 38px;
+  padding: 0 0 1em;
   border-bottom: 1px solid #dfe5e7;
 }
 .entry-content .hatena-fotolife {
@@ -756,7 +759,8 @@ iframe {
 @media screen and (max-width: 970px) {
   #box2-inner {
     zoom: 1;
-    margin: auto -30px;
+    width: auto;
+    margin: auto -20px;
   }
   #box2-inner:before,
   #box2-inner:after {
@@ -772,74 +776,78 @@ iframe {
     margin: auto;
   }
 }
-.hatena-module {
+#box2-inner a {
+  color: #222;
+  text-decoration: none;
+}
+#box2-inner a:hover {
+  color: #222;
+  text-decoration: underline;
+}
+#box2-inner .hatena-module {
   vertical-align: top;
   margin: 0 auto 38px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 @media screen and (max-width: 970px) {
-  .hatena-module {
+  #box2-inner .hatena-module {
     float: left;
     width: 50%;
-    padding: 0 30px;
+    padding: 0 20px;
   }
-  .hatena-module:nth-child(odd) {
+  #box2-inner .hatena-module:nth-child(odd) {
     clear: both;
   }
 }
 @media screen and (max-width: 580px) {
-  .hatena-module {
+  #box2-inner .hatena-module {
     float: none;
     width: 100%;
-    padding: 0 20px;
   }
 }
-.hatena-module-title {
-  font-size: 1.071em;
+#box2-inner .hatena-module-title {
+  font-size: 1em;
   font-weight: bold;
   line-height: 1.2;
-  color: #413f3f;
+  color: #222;
   margin-bottom: 10px;
 }
-.hatena-module-title a {
-  color: #413f3f;
+#box2-inner .hatena-module-body p {
+  line-height: 1.6;
 }
-.hatena-module-title a:hover {
-  color: #413f3f;
-  text-decoration: underline;
-}
-.hatena-module-body p {
-  line-height: 1.5;
-}
-ul {
+#box2-inner .hatena-urllist {
   padding-left: 0;
   margin: 0 auto 14px;
 }
-li {
-  border-bottom: 1px solid #dfe5e7;
-  padding: 10px 0;
+#box2-inner .hatena-urllist li {
   list-style: none;
-  line-height: 1.5;
+  font-size: .8em;
+  line-height: 1.8;
 }
-li .urllist-title-link {
+#box2-inner .hatena-urllist li .urllist-title-link {
   font-size: 100%;
 }
-.profile-icon {
-  display: inline-block;
-  -webkit-border-radius: 64px;
-  -moz-border-radius: 64px;
-  border-radius: 64px;
+#box2-inner .profile-icon-link {
+  float: left;
+  width: 50px;
+  margin: 0 0 10px;
 }
-.search-form {
+#box2-inner .profile-icon {
+  display: inline-block;
+  border-radius: 50%;
+}
+#box2-inner .id {
+  float: right;
+  width: calc(100% - 60px);
+  margin: 0 0 10px;
+  font-size: .9em;
+}
+#box2-inner .search-form {
   width: 100%;
   background: #fff;
   position: relative;
 }
-.search-module-input {
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
+#box2-inner .search-module-input {
   border-radius: 2px;
   border: 1px solid #dfe5e7;
   width: 100%;
@@ -848,14 +856,14 @@ li .urllist-title-link {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.search-module-input:hover {
-  border: 1px solid #0aaadc;
+#box2-inner .search-module-input:hover {
+  border: 1px solid #3a3939;
 }
-.search-module-input:focus {
+#box2-inner .search-module-input:focus {
   outline: none;
-  border: 1px solid #413f3f;
+  border: 1px solid #222;
 }
-.search-module-button {
+#box2-inner .search-module-button {
   width: 20px;
   height: 20px;
   position: absolute;
@@ -864,12 +872,13 @@ li .urllist-title-link {
   margin: auto;
   right: 14px;
   border: none;
-  background: url("images/saerch.png") 50% 50% no-repeat;
+  background: url("http://blog.hatena.ne.jp/images/theme/search@2x.png") no-repeat right center;
+  background-size: 20px 20px;
   text-indent: -999px;
   cursor: pointer;
   opacity: 0.4;
 }
-.search-module-button:hover {
+#box2-inner .search-module-button:hover {
   opacity: .8;
 }
 .pager {
@@ -948,22 +957,22 @@ li .urllist-title-link {
   border-radius: 2px;
 }
 .leave-comment-title:hover {
-  background: #0aaadc;
+  background: #189BC6;
   color: #fff;
   text-decoration: none;
 }
 .keyword {
-  color: #747272;
-  border-bottom: 1px dotted #747272;
+  color: #3a3939;
+  border-bottom: 1px dotted #3a3939;
   padding-bottom: 0;
 }
 .keyword:hover {
-  color: #0aaadc;
+  color: #189BC6;
   border-bottom: none;
 }
 .author,
 .comment-metadata time {
-  color: #413f3f;
+  color: #222;
 }
 .hatena-star-container {
   margin: 0 auto 14px;
@@ -982,12 +991,12 @@ li .urllist-title-link {
   font-weight: bold;
   line-height: 1.2;
   margin: 24px auto 10px auto;
-  color: #0aaadc;
+  color: #189BC6;
 }
 .page-about .entry-content dt:first-child {
   padding: 80px 0 0 4px;
   margin: 0 auto 10px -7px;
-  border-left: 3px solid #0aaadc;
+  border-left: 3px solid #189BC6;
   line-height: .9em;
 }
 .page-about .entry-content dd {
@@ -1004,7 +1013,7 @@ li .urllist-title-link {
 }
 .breadcrumb a:visited {
   text-decoration: none;
-  color: #0aaadc;
+  color: #189BC6;
 }
 .entry.no-entry {
   padding: 80px;
