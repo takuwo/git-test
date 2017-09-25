@@ -64,12 +64,6 @@
   }
   a {
     color: @base-font-lighten;
-    margin-left: 6px;
-    @media @viewport-580 {
-      &:first-child {
-        margin: 0;
-      }
-    }
     &:hover {
       color: @base-font-lighten;
       text-decoration: none;;
@@ -82,11 +76,13 @@
 }
 .entry-header-menu {
   position: absolute;
+  line-height: 1;
   top: 0;
   left: -3em;
   a {
     font-size: .75em;
     line-height: 1;
+    vertical-align: top;
   }
 }
 // }}}

@@ -654,12 +654,6 @@ iframe {
 }
 .categories a {
   color: #888;
-  margin-left: 6px;
-}
-@media screen and (max-width: 580px) {
-  .categories a:first-child {
-    margin: 0;
-  }
 }
 .categories a:hover {
   color: #888;
@@ -670,12 +664,14 @@ iframe {
 }
 .entry-header-menu {
   position: absolute;
+  line-height: 1;
   top: 0;
   left: -3em;
 }
 .entry-header-menu a {
   font-size: .75em;
   line-height: 1;
+  vertical-align: top;
 }
 .entry-content {
   margin: 0 auto 2em;
