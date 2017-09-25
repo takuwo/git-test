@@ -627,7 +627,7 @@ iframe {
   font-weight: bold;
   text-align: left;
   letter-spacing: 1px;
-  margin: 7px auto 14px;
+  margin: .5em auto;
   position: relative;
 }
 .entry-title a {
@@ -655,6 +655,11 @@ iframe {
 .categories a {
   color: #888;
   margin-left: 6px;
+}
+@media screen and (max-width: 580px) {
+  .categories a:first-child {
+    margin: 0;
+  }
 }
 .categories a:hover {
   color: #888;
@@ -688,8 +693,8 @@ iframe {
 .entry-content ol {
   font-size: 1em;
   line-height: 1.7;
-  padding-left: 10px;
   margin: 0 auto 1em;
+  padding-left: 1em;
 }
 .entry-content ul p,
 .entry-content ol p {
@@ -990,19 +995,18 @@ iframe {
 .leave-comment-title {
   display: inline-block;
   font-size: .65em;
-  text-align: left;
   line-height: 1;
-  cursor: pointer;
   color: #888;
-  background: #e2e2e2;
   margin: 0;
-  padding: 10px;
+  padding: .7em .5em;
+  border: 1px solid #dfe5e7;
   border-radius: 2px;
 }
 .leave-comment-title:hover {
-  background: #b4b4b4;
-  color: #fff;
+  background: #e2e2e2;
+  color: #888;
   text-decoration: none;
+  border-color: transparent;
 }
 .keyword {
   color: #3a3939;

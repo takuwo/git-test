@@ -40,7 +40,7 @@
   font-weight: bold;
   text-align: left;
   letter-spacing: 1px;
-  margin: 7px auto 14px;
+  margin: .5em auto;
   position: relative;
   a {
     color: @base-font-darken;
@@ -65,6 +65,11 @@
   a {
     color: @base-font-lighten;
     margin-left: 6px;
+    @media @viewport-580 {
+      &:first-child {
+        margin: 0;
+      }
+    }
     &:hover {
       color: @base-font-lighten;
       text-decoration: none;;
@@ -101,8 +106,8 @@
   ul, ol {
     font-size: 1em;
     line-height: 1.7;
-    padding-left: 10px;
     margin: 0 auto 1em;
+    padding-left: 1em;
     p {
       margin: 0 auto;
     }
