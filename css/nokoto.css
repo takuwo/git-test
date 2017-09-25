@@ -596,8 +596,7 @@ iframe {
     max-width: 650px;
   }
 }
-.entry,
-.archive-entry {
+.entry {
   margin: 0 auto 3em;
   padding: 0 0 3em;
   border-bottom: 1px solid #eef1f2;
@@ -832,6 +831,7 @@ iframe {
   #box2-inner .hatena-module {
     float: none;
     width: 100%;
+    padding: 0;
   }
 }
 #box2-inner .hatena-module-title {
@@ -1049,17 +1049,69 @@ iframe {
   margin: 0;
   line-height: 1.7;
 }
-.page-archive h2,
 .page-archive .archive-entries {
-  margin: 48px auto;
+  margin: 0 auto 3em;
+}
+.page-archive .archive-header-category {
+  margin: 0 0 2em;
+}
+.page-archive .archive-heading {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin: 0 0 1em;
+}
+.page-archive .archive-heading:before {
+  content: '#';
+}
+.page-archive .archive-entry {
+  margin: 0 auto 3em;
+  padding: 0 0 3em;
+  border-bottom: 1px solid #eef1f2;
+  position: relative;
+}
+.page-archive .archive-entry .date {
+  font-size: .65em;
+  line-height: 1;
+  font-weight: bold;
+}
+.page-archive .archive-entry .date a {
+  color: #888;
+}
+.page-archive .archive-entry .date a:hover {
+  color: #888;
+}
+.page-archive .archive-entry .entry-title {
+  font-size: 1.1em;
+  line-height: 1.4;
+}
+.page-archive .archive-entry .categories {
+  margin: 0 0 1em;
+}
+.page-archive .archive-entry .categories a:first-child {
+  margin: 0;
+}
+.page-archive .archive-entry .entry-description {
+  font-size: .85em;
+  color: #545252;
 }
 .breadcrumb {
-  border-bottom: 1px solid #dfe5e7;
-  margin: 48px auto;
+  width: 970px;
+  font-size: .8em;
+  margin: 0 auto 48px;
+  padding: 0 0 1em;
+  border-bottom: 1px solid #eef1f2;
 }
-.breadcrumb a:visited {
-  text-decoration: none;
-  color: #189BC6;
+@media screen and (max-width: 970px) {
+  .breadcrumb {
+    width: 100%;
+    max-width: 650px;
+  }
+}
+.breadcrumb a {
+  color: #3a3939;
+}
+.breadcrumb a:hover {
+  color: #3a3939;
 }
 .entry.no-entry {
   padding: 80px;
