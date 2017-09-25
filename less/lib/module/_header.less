@@ -1,9 +1,15 @@
 #blog-title {
-  margin: 3em auto 6em;
+  margin: 2em auto 4em;
 }
 #blog-title-inner {
-  text-align: center;
-  .border-radius(4px);
+  width: 960px;
+  margin: 0 auto;
+  text-align: left;
+  @media @viewport-970 {
+    text-align: center;
+    width: 100%;
+    max-width: 650px;
+  }
     @media @viewport-580 {
     height: 100%;
   }
@@ -14,14 +20,13 @@
   }
 }
 #title {
-  font-size: 1.5em;
+  font-size: 2em;
   margin-top: 0;
-  padding: 30px 20px 0;
+  padding: 0;
   margin: 0 auto 10px;
-  letter-spacing: 10px;
   a {
     text-decoration: none;
-    color: @base-font-color;
+    color: @base-font-darken;
   }
 }
 #blog-description {
@@ -29,5 +34,5 @@
   font-weight: normal !important;
   border-bottom: none;
   margin: 0 auto;
-  padding: 0 20px 30px;
+  padding: 0 0 30px;
 }

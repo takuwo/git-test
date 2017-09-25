@@ -7,32 +7,21 @@
     max-width: 650px;
   }
 }
-.entry,
-.archive-entry {
-  margin: 0 auto 74px;
+.entry {
+  margin: 0 auto 3em;
+  padding: 0 0 3em;
+  border-bottom: 1px solid @line-color-lighten;
 }
 
 //entry header {{{
-.entry-title {
-  font-size: 1.5em;
-  font-weight: bold;
-  text-align: left;
-  letter-spacing: 2px;
-  margin: 0 auto 28px;
-  a {
-    color: @base-font-darken;
-    &:hover {
-      text-decoration: none;
-      color: @base-font-darken;
-    }
-    &:visited {
-      color: @base-font-darken;
-    }
-  }
+.entry-header {
+  margin: 0 0 28px;
+  position: relative;
 }
 .entry-date {
   font-family: "Avenir", "Helvetica", sans-serif;
   font-size: .75em;
+  line-height: 1;
   font-weight: bold;
   text-align: left;
     a {
@@ -46,15 +35,35 @@
     }
   }
 }
+.entry-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: left;
+  letter-spacing: 1px;
+  margin: 7px auto 14px;
+  position: relative;
+  a {
+    color: @base-font-darken;
+    &:hover {
+      text-decoration: none;
+      color: @base-font-darken;
+    }
+    &:visited {
+      color: @base-font-darken;
+    }
+  }
+}
 .categories {
   font-size: .75em;
-  text-align: right;
+  line-height: 1;
   position: absolute;
-  top: 45px;
+  top: 0;
   right: 0;
+  @media @viewport-580 {
+    position: static;
+  }
   a {
     color: @base-font-lighten;
-    font-size: ..875em;
     margin-left: 6px;
     &:hover {
       color: @base-font-lighten;
@@ -66,24 +75,20 @@
     }
   }
 }
-// }}}
-
-// edit button {{{
 .entry-header-menu {
   position: absolute;
-  top: 10px;
-  right: -60px;
+  top: 0;
+  left: -3em;
   a {
     font-size: .75em;
-    padding: 4px 8px;
+    line-height: 1;
   }
 }
-/// }}}
+// }}}
 
 // entry content {{{
 .entry-content {
-  margin: 0 auto 38px;
-  border-bottom: 1px solid @line-color;
+  margin: 0 auto 2em;
   // fotolife
   .hatena-fotolife {
     .border-radius(3px);
@@ -175,3 +180,14 @@
   }
 }
 // }}}
+.entry-footer-section {
+  font-size: .8em;
+  line-height: 1;
+  color: @base-font-lighten;
+  a {
+    color: @base-font-lighten;
+    &:hover {
+      color: @base-font-lighten;
+    }
+  }
+}

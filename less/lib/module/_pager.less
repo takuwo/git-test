@@ -2,12 +2,23 @@
   display: table;
   table-layout: fixed;
   width: 100%;
-  padding: 0 0 48px;
-  border-bottom: 1px solid @line-color;
+  margin: 0 0 4em;
+  @media @viewport-970 {
+    margin: 0 0 2em;
+    padding: 0 0 2em;
+    border-bottom: 1px solid @line-color;
+  }
 }
 .pager-next,
 .pager-prev {
+  font-size: .85em;
   display: table-cell;
+  a {
+    color: @base-font-lighten;
+    &:hover {
+      color: @base-font-lighten;
+    }
+  }
 }
 .pager-next {
   padding-left: 15px;
