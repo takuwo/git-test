@@ -478,7 +478,7 @@ textarea {
 }
 body {
   font-size: 100%;
-  font-family: "Noto Snas Japanese", sans-serif;
+  font-family: "Noto Sans Japanese", sans-serif;
   color: #3a3939;
   background: #fcfcfc;
   margin: 0;
@@ -514,7 +514,6 @@ h4,
 h5,
 h6 {
   margin: 28px auto 8px;
-  font-weight: normal;
 }
 h1 {
   font-size: 1.5em;
@@ -536,9 +535,11 @@ h5 {
 }
 h6 {
   font-size: 1em;
+  font-weight: 300;
 }
 p {
   font-size: 1em;
+  font-weight: 300;
   line-height: 1.7;
   margin: 0 auto 1em;
 }
