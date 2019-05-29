@@ -1,9 +1,9 @@
 ---
 name: Test
 about: Describe this issue template's purpose here.
-title: ''
-labels: ''
-assignees: ''
+title: Test
+labels: test
+assignees: takuwo
 
 ---
 
