@@ -381,7 +381,7 @@ template {
   transform: translatey(-50%);
 }
 #title {
-  font-size: 1em;
+  font-size: 1.2em;
   margin-top: 0;
   padding: 0;
   margin: 0 auto 10px;
@@ -411,7 +411,7 @@ body {
   font-size: 100%;
   font-family: 'Noto Sans Japanese', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Helvetica', 'Hiragino Kaku Gothic Pro', 'Meiryo', 'MS PGothic', sans-serif;
   color: #3a3939;
-  background: #fcfcfc;
+  background: #fff;
   margin: 0;
   letter-spacing: 1px;
 }
@@ -447,23 +447,19 @@ h6 {
   margin: 28px auto 8px;
 }
 h1 {
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-weight: bold;
 }
 h2 {
-  font-size: 1.5em;
-}
-h3 {
-  font-size: 1.25em;
+  font-size: 1.1em;
   font-weight: bold;
 }
-h4 {
-  font-size: 1.25em;
-}
-h5 {
+h3 {
   font-size: 1em;
   font-weight: bold;
 }
+h4,
+h5,
 h6 {
   font-size: 1em;
   font-weight: 300;
@@ -625,10 +621,10 @@ iframe {
   padding: 0;
 }
 .entry-content tr:hover {
-  background: #fcfcfc;
+  background: #fff;
 }
 .entry-content th {
-  background: #fcfcfc;
+  background: #fff;
   font-weight: bold;
   border: 1px solid #dfe5e7;
   padding: 5px 10px;
@@ -693,17 +689,11 @@ iframe {
   color: #888;
 }
 #box2-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   width: 100%;
-  zoom: 1;
-  margin: auto -20px;
-}
-#box2-inner:before,
-#box2-inner:after {
-  content: "";
-  display: table;
-}
-#box2-inner:after {
-  clear: both;
+  margin: 0 0 40px;
 }
 @media screen and (max-width: 580px) {
   #box2-inner {
@@ -719,17 +709,15 @@ iframe {
   text-decoration: underline;
 }
 #box2-inner .hatena-module {
-  float: left;
-  width: 50%;
-  padding: 0 20px;
+  flex: 0 1 48%;
 }
-#box2-inner .hatena-module:nth-child(odd) {
-  clear: both;
+#box2-inner .hatena-module:first-child,
+#box2-inner .hatena-module:nth-child(2) {
+  flex: 0 1 100%;
 }
 @media screen and (max-width: 580px) {
   #box2-inner .hatena-module {
-    float: none;
-    width: 100%;
+    flex: 0 1 100%;
     padding: 0;
   }
 }
@@ -755,20 +743,30 @@ iframe {
 #box2-inner .hatena-urllist li .urllist-title-link {
   font-size: 100%;
 }
+#box2-inner .hatena-module-profile {
+  margin: 0 0 20px;
+}
+#box2-inner .hatena-module-profile .hatena-module-body {
+  display: flex;
+  justify-content: space-between;
+}
 #box2-inner .profile-icon-link {
-  float: left;
   width: 50px;
-  margin: 0 0 10px;
+  margin: 0;
 }
 #box2-inner .profile-icon {
   display: inline-block;
   border-radius: 50%;
 }
 #box2-inner .id {
-  float: right;
-  width: calc(100% - 60px);
-  margin: 0 0 10px;
+  width: calc(100% - (60px + 110px));
+  margin: 0;
   font-size: 0.9em;
+}
+#box2-inner .hatena-follow-button-box {
+  clear: none;
+  margin: 0;
+  height: auto;
 }
 #box2-inner .search-form {
   width: 100%;
@@ -778,17 +776,21 @@ iframe {
 }
 #box2-inner .search-module-input {
   border-radius: 2px;
-  border: 1px solid #dfe5e7;
+  border: 0;
+  background-color: #f1f3f4;
   width: 100%;
-  padding: 2px 0 2px 4px;
+  padding: 10px 7px 10px 14px;
+  border-radius: 19px;
   box-sizing: border-box;
 }
 #box2-inner .search-module-input:hover {
-  border: 1px solid #3a3939;
+  border: 0;
+  background: #eef1f2;
 }
 #box2-inner .search-module-input:focus {
   outline: none;
-  border: 1px solid #222;
+  border: 0;
+  background: #eef1f2;
 }
 #box2-inner .search-module-button {
   width: 20px;
