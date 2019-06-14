@@ -16,10 +16,4 @@
     "url": "https://github.com/takuwo/nokoto/issues"
   },
   "homepage": "https://github.com/takuwo/nokoto#readme",
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
-    "gulp-less": "^3.3.2",
-    "gulp-plumber": "^1.1.0"
-  }
 }

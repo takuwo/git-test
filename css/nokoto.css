@@ -102,6 +102,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
+  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   /* 2 */
 }
@@ -203,6 +204,7 @@ figure {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   /* 1 */
   height: 0;
@@ -295,6 +297,7 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   color: inherit;
@@ -320,6 +323,7 @@ textarea {
  */
 [type="checkbox"],
 [type="radio"] {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -447,6 +451,7 @@ textarea {
   top: 50%;
   -wibkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 #title {
@@ -460,7 +465,7 @@ textarea {
   color: #222;
 }
 #blog-description {
-  font-size: .875em;
+  font-size: 0.875em;
   font-weight: normal !important;
   border-bottom: none;
   margin: 0 auto;
@@ -471,7 +476,7 @@ textarea {
 }
 #footer-inner {
   text-align: center;
-  font-size: .65em;
+  font-size: 0.65em;
 }
 .services {
   line-height: 1;
@@ -572,12 +577,18 @@ iframe {
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 #content-inner {
   width: 960px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-line-pack: center;
   align-content: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   margin: 0 auto;
 }
@@ -608,7 +619,7 @@ iframe {
 }
 .entry-date {
   font-family: "Avenir", "Helvetica", sans-serif;
-  font-size: .75em;
+  font-size: 0.75em;
   line-height: 1;
   font-weight: bold;
   text-align: left;
@@ -628,7 +639,7 @@ iframe {
   font-weight: bold;
   text-align: left;
   letter-spacing: 1px;
-  margin: .5em auto;
+  margin: 0.5em auto;
   position: relative;
 }
 .entry-title a {
@@ -642,7 +653,7 @@ iframe {
   color: #222;
 }
 .categories {
-  font-size: .75em;
+  font-size: 0.75em;
   line-height: 1;
   position: absolute;
   top: 0;
@@ -670,7 +681,7 @@ iframe {
   left: -3em;
 }
 .entry-header-menu a {
-  font-size: .75em;
+  font-size: 0.75em;
   line-height: 1;
   vertical-align: top;
 }
@@ -684,7 +695,7 @@ iframe {
 }
 .entry-content .hatena-image-left,
 .entry-content .hatena-image-right {
-  margin-right: .875em;
+  margin-right: 0.875em;
 }
 .entry-content ul,
 .entry-content ol {
@@ -737,7 +748,7 @@ iframe {
   padding: 0 0 0 1em;
 }
 .entry-content .code {
-  font-size: .875em;
+  font-size: 0.875em;
   line-height: 1.7;
   background: #fff;
   margin: 28px auto;
@@ -751,7 +762,7 @@ iframe {
   word-wrap: break-word;
 }
 .entry-content code {
-  font-size: .875em;
+  font-size: 0.875em;
   background: #fff;
   border: 1px solid #dfe5e7;
   padding: 3px 5px;
@@ -773,7 +784,7 @@ iframe {
   padding: 0;
 }
 .entry-footer-section {
-  font-size: .8em;
+  font-size: 0.8em;
   line-height: 1;
   color: #888;
 }
@@ -817,6 +828,7 @@ iframe {
 #box2-inner .hatena-module {
   vertical-align: top;
   margin: 0 auto 38px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 @media screen and (max-width: 970px) {
@@ -837,7 +849,7 @@ iframe {
   }
 }
 #box2-inner .hatena-module-title {
-  font-size: .8em;
+  font-size: 0.8em;
   font-weight: bold;
   line-height: 1.2;
   color: #222;
@@ -852,7 +864,7 @@ iframe {
 }
 #box2-inner .hatena-urllist li {
   list-style: none;
-  font-size: .8em;
+  font-size: 0.8em;
   line-height: 1.8;
 }
 #box2-inner .hatena-urllist li .urllist-title-link {
@@ -871,7 +883,7 @@ iframe {
   float: right;
   width: calc(100% - 60px);
   margin: 0 0 10px;
-  font-size: .9em;
+  font-size: 0.9em;
 }
 #box2-inner .search-form {
   width: 100%;
@@ -910,7 +922,7 @@ iframe {
   opacity: 0.4;
 }
 #box2-inner .search-module-button:hover {
-  opacity: .8;
+  opacity: 0.8;
 }
 .pager {
   display: table;
@@ -927,7 +939,7 @@ iframe {
 }
 .pager-next,
 .pager-prev {
-  font-size: .85em;
+  font-size: 0.85em;
   display: table-cell;
 }
 .pager-next a,
@@ -976,7 +988,7 @@ iframe {
   margin: 0 auto 10px;
 }
 .comment-box .comment-content p {
-  font-size: .93em;
+  font-size: 0.93em;
   line-height: 1.5;
   margin: 10px auto;
 }
@@ -991,11 +1003,11 @@ iframe {
 }
 .leave-comment-title {
   display: inline-block;
-  font-size: .65em;
+  font-size: 0.65em;
   line-height: 1;
   color: #888;
   margin: 0;
-  padding: .7em .5em;
+  padding: 0.7em 0.5em;
   border: 1px solid #dfe5e7;
   border-radius: 2px;
 }
@@ -1044,7 +1056,7 @@ iframe {
   padding: 80px 0 0 4px;
   margin: 0 auto 10px -7px;
   border-left: 3px solid #189BC6;
-  line-height: .9em;
+  line-height: 0.9em;
 }
 .page-about .entry-content dd {
   margin: 0;
@@ -1071,7 +1083,7 @@ iframe {
   position: relative;
 }
 .page-archive .archive-entry .date {
-  font-size: .65em;
+  font-size: 0.65em;
   line-height: 1;
   font-weight: bold;
 }
@@ -1092,12 +1104,12 @@ iframe {
   margin: 0;
 }
 .page-archive .archive-entry .entry-description {
-  font-size: .85em;
+  font-size: 0.85em;
   color: #545252;
 }
 .breadcrumb {
   width: 970px;
-  font-size: .8em;
+  font-size: 0.8em;
   margin: 0 auto 48px;
   padding: 0 0 1em;
   border-bottom: 1px solid #eef1f2;
