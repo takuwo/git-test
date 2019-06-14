@@ -366,7 +366,7 @@ template {
 }
 #blog-title-inner {
   width: 100%;
-  max-width: 650px;
+  max-width: 600px;
   margin: 0 auto;
   text-align: left;
 }
@@ -507,13 +507,12 @@ iframe {
 }
 #content-inner {
   width: 100%;
-  max-width: 650px;
+  max-width: 600px;
   margin: 0 auto;
 }
 #wrapper {
-  width: 650px;
   width: 100%;
-  max-width: 650px;
+  max-width: 600px;
 }
 .entry {
   margin: 0 auto 3em;
@@ -992,7 +991,7 @@ iframe {
 }
 .breadcrumb {
   width: 100%;
-  max-width: 650px;
+  max-width: 600px;
   font-size: 0.8em;
   margin: 0 auto 48px;
   padding: 0 0 1em;
