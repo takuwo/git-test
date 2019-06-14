@@ -430,16 +430,10 @@ textarea {
   margin: 2em auto 4em;
 }
 #blog-title-inner {
-  width: 960px;
+  width: 100%;
+  max-width: 650px;
   margin: 0 auto;
   text-align: left;
-}
-@media screen and (max-width: 970px) {
-  #blog-title-inner {
-    text-align: center;
-    width: 100%;
-    max-width: 650px;
-  }
 }
 @media screen and (max-width: 580px) {
   #blog-title-inner {
@@ -581,32 +575,13 @@ iframe {
   box-sizing: border-box;
 }
 #content-inner {
-  width: 960px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-line-pack: center;
-  align-content: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  width: 100%;
+  max-width: 650px;
   margin: 0 auto;
 }
-@media screen and (max-width: 970px) {
-  #content-inner {
-    display: block;
-    width: 100%;
-    max-width: 650px;
-  }
-}
 #wrapper {
-  width: 650px;
-}
-@media screen and (max-width: 970px) {
-  #wrapper {
-    width: 100%;
-    max-width: 650px;
-  }
+  width: 100%;
+  max-width: 650px;
 }
 .entry {
   margin: 0 auto 3em;
@@ -795,22 +770,17 @@ iframe {
   color: #888;
 }
 #box2-inner {
-  width: 240px;
+  width: 100%;
+  zoom: 1;
+  margin: auto -20px;
 }
-@media screen and (max-width: 970px) {
-  #box2-inner {
-    zoom: 1;
-    width: auto;
-    margin: auto -20px;
-  }
-  #box2-inner:before,
-  #box2-inner:after {
-    content: "";
-    display: table;
-  }
-  #box2-inner:after {
-    clear: both;
-  }
+#box2-inner:before,
+#box2-inner:after {
+  content: "";
+  display: table;
+}
+#box2-inner:after {
+  clear: both;
 }
 @media screen and (max-width: 580px) {
   #box2-inner {
@@ -826,20 +796,12 @@ iframe {
   text-decoration: underline;
 }
 #box2-inner .hatena-module {
-  vertical-align: top;
-  margin: 0 auto 38px;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+  float: left;
+  width: 50%;
+  padding: 0 20px;
 }
-@media screen and (max-width: 970px) {
-  #box2-inner .hatena-module {
-    float: left;
-    width: 50%;
-    padding: 0 20px;
-  }
-  #box2-inner .hatena-module:nth-child(odd) {
-    clear: both;
-  }
+#box2-inner .hatena-module:nth-child(odd) {
+  clear: both;
 }
 @media screen and (max-width: 580px) {
   #box2-inner .hatena-module {
@@ -889,6 +851,7 @@ iframe {
   width: 100%;
   background: #fff;
   position: relative;
+  margin: 0 0 20px;
 }
 #box2-inner .search-module-input {
   border-radius: 2px;
@@ -1108,17 +1071,12 @@ iframe {
   color: #545252;
 }
 .breadcrumb {
-  width: 970px;
+  width: 100%;
+  max-width: 650px;
   font-size: 0.8em;
   margin: 0 auto 48px;
   padding: 0 0 1em;
   border-bottom: 1px solid #eef1f2;
-}
-@media screen and (max-width: 970px) {
-  .breadcrumb {
-    width: 100%;
-    max-width: 650px;
-  }
 }
 .breadcrumb a {
   color: #3a3939;
