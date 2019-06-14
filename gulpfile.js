@@ -1,10 +1,10 @@
-var gulp         = require('gulp'),
+let gulp         = require('gulp'),
     less         = require('gulp-less');
     plumber      = require("gulp-plumber");
     autoprefixer = require('gulp-autoprefixer');
 
-var lessPath = './less/';
-var cssPath = './css/';
+let lessPath = './less/';
+let cssPath = './css/';
 
 gulp.task('less', function() {
     return gulp.src(lessPath + 'nokoto.less')
