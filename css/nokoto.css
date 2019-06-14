@@ -102,7 +102,6 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   /* 2 */
 }
@@ -204,7 +203,6 @@ figure {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   /* 1 */
   height: 0;
@@ -297,7 +295,6 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   color: inherit;
@@ -323,7 +320,6 @@ textarea {
  */
 [type="checkbox"],
 [type="radio"] {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -443,10 +439,7 @@ textarea {
 .header-image-enable #blog-title-content {
   position: relative;
   top: 50%;
-  -wibkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+  transform: translatey(-50%);
 }
 #title {
   font-size: 2em;
@@ -571,7 +564,6 @@ iframe {
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 #content-inner {
@@ -580,6 +572,7 @@ iframe {
   margin: 0 auto;
 }
 #wrapper {
+  width: 650px;
   width: 100%;
   max-width: 650px;
 }
@@ -664,8 +657,6 @@ iframe {
   margin: 0 auto 2em;
 }
 .entry-content .hatena-fotolife {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   border-radius: 3px;
 }
 .entry-content .hatena-image-left,
@@ -713,8 +704,6 @@ iframe {
   background: #fff;
   padding: 1.5em;
   margin: 28px auto;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   border-radius: 3px;
 }
 .entry-content blockquote > blockquote {
@@ -729,8 +718,6 @@ iframe {
   margin: 28px auto;
   padding: 1.5em;
   border: 1px solid #dfe5e7;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   border-radius: 3px;
   overflow: auto;
   white-space: pre-wrap;
@@ -745,8 +732,6 @@ iframe {
 .entry-content .hatena-asin-detail,
 .entry-content .itunes-embed,
 .entry-content .embed-wrapper {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   border-radius: 3px;
   margin: 28px auto;
   padding: 1.5em;
@@ -858,8 +843,6 @@ iframe {
   border: 1px solid #dfe5e7;
   width: 100%;
   padding: 2px 0 2px 4px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 #box2-inner .search-module-input:hover {
@@ -942,8 +925,6 @@ iframe {
   left: 0;
   width: 40px;
   height: 40px;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
   border-radius: 2px;
 }
 .comment-box .comment-user-name {
