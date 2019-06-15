@@ -1,18 +1,13 @@
 // entry1つで1つのModule（少し括りが大きいので場合によっては分けてもよい）
 // entry-header・編集ボタン・entry-contentに分けられている
 #wrapper {
-  // width: 650px;
   width: 100%;
   max-width: 600px;
-  // @media @viewport-970 {
-  //   width: 100%;
-  //   max-width: 650px;
-  // }
 }
 .entry {
-  margin: 0 auto 3em;
-  padding: 0 0 3em;
   border-bottom: 1px solid @line-color-lighten;
+  margin: 0 auto 2em;
+  padding: 0 0 2em;
 }
 
 //entry header
@@ -24,7 +19,6 @@
   font-family: "Avenir", "Helvetica", sans-serif;
   font-size: .75em;
   line-height: 1;
-  font-weight: bold;
   text-align: left;
     a {
     color: @base-font-lighten;
@@ -38,11 +32,11 @@
   }
 }
 .entry-title {
-  font-size: 1.2em;
+  font-size: 1.5em;
   font-weight: bold;
   text-align: left;
   letter-spacing: 1px;
-  margin: .5em auto;
+  margin: .2em auto 0;
   position: relative;
   a {
     color: @base-font-darken;
@@ -51,7 +45,7 @@
       color: @base-font-darken;
     }
     &:visited {
-      color: @base-font-darken;
+      color: @base-font-color;
     }
   }
 }

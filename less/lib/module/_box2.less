@@ -6,16 +6,9 @@ flex-wrap: wrap;
 justify-content: space-between;
 width: 100%;
 margin: 0 0 40px;
-// width: 240px;
-// @media @viewport-970 {
-//   // width: auto;
-//   // .clearfix();
-//   // margin: auto -20px;
-// }
 @media @viewport-580 {
   margin: auto;
 }
-
 a {
   color: @base-font-darken;
   text-decoration: none;
@@ -29,21 +22,6 @@ a {
   &:first-child,
   &:nth-child(2) {
     flex: 0 1 100%;
-  }
-  // vertical-align: top;
-  // margin: 0 auto 38px;
-  // box-sizing: border-box;
-  // @media @viewport-970 {
-  //   float: left;
-  //   width: 50%;
-  //   padding: 0 20px;
-  //   &:nth-child(odd) {
-  //     clear: both;
-  //   }
-  // }
-  @media @viewport-580 {
-    flex: 0 1 100%;
-    padding: 0;
   }
 }
 .hatena-module-title {
@@ -61,7 +39,7 @@ a {
   margin: 0 auto 14px;
   li {
     list-style: none;
-    font-size: .8em;
+    font-size: .9em;
     line-height: 1.8;
     .urllist-title-link {
       font-size: 100%;
@@ -73,24 +51,37 @@ a {
 .hatena-module-profile {
   margin: 0 0 20px;
   .hatena-module-body {
-    display: flex;
-    justify-content: space-between;
+    .clearfix();
   }
 }
 .profile-icon-link {
-  width: 50px;
-  margin: 0; 
-}
-.profile-icon {
-  display: inline-block;
-  border-radius: 50%
+  float: left;
+  width: 60px;
+  margin: 0 20px 0 0; 
+  .profile-icon {
+    border-radius: 50%
+  }
 }
 .id {
-  width: calc(~'100% - (60px + 110px)');
-  margin: 0;
-  font-size: .9em;
+  float: right;
+  font-size: 14px;
+  width: calc(~'100% - 80px');
+  margin: 0 0 .5em;
+}
+.profile-description {
+  float: right;
+  width: calc(~'100% - 80px');
+  p {
+    font-size:   12px;
+    margin: 0 auto .5em;
+  }
+  a {
+    text-decoration: underline;
+  }
 }
 .hatena-follow-button-box {
+  float: right;
+  width: calc(~'100% - 80px');
   clear: none;
   margin: 0;
   height: auto;
@@ -101,13 +92,13 @@ a {
   width: 100%;
   background: @fff;
   position: relative;
-  margin: 0 0 20px;
+  margin: 0 0 25px;
 }
 .search-module-input {
   border-radius: 2px;
   border: 0;
-  @search-form: #f1f3f4;
-  @search-from-dark: darken(@search-form, 1%);
+  @search-form: #f6f7f8;
+  @search-from-dark: darken(@search-form, 2%);
   background-color: @search-form;
   width: 100%;
   padding: 10px 7px 10px 14px;
@@ -121,6 +112,9 @@ a {
     outline: none;
     border: 0;
     background: @search-from-dark;
+  }
+  &::placeholder {
+    color: lighten(#949495, 10%);
   }
 }
 .search-module-button {

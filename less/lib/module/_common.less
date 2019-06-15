@@ -10,6 +10,7 @@ body {
     font-size: 87.5%; // 14px
   }
 }
+
 // typography
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
@@ -44,6 +45,7 @@ p {
   line-height: 1.9;
   margin: 0 auto 1em;
 }
+
 // links
 a {
   color: @theme-color;
@@ -56,16 +58,19 @@ a {
   &:focus { color: @theme-color-darken; }
   &:active { color: @theme-color-darken; }
 }
+
 // hr
 hr {
   margin: 2em auto;
   border-width: 0;
   border-top: 1px solid @line-color;
 }
+
 // iframe
 iframe {
   margin: 0 auto 1em;
 }
+
 // containerは1番大きなdivで全ての箱である
 #container {
   width: 100%;
@@ -74,16 +79,7 @@ iframe {
   box-sizing: border-box;
 }
 #content-inner {
-  // width: 960px;
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
-  // display: flex;
-  // align-content: center;
-  // justify-content: space-between;
-  // @media @viewport-970 {
-  //   display: block;
-  //   width: 100%;
-  //   max-width: 650px;
-  // }
 }
