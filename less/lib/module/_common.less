@@ -1,7 +1,7 @@
 // body
 body {
   font-size: 100%;
-  font-family: "Noto Sans Japanese", sans-serif;
+  font-family: 'Noto Sans Japanese', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Helvetica', 'Hiragino Kaku Gothic Pro', 'Meiryo', 'MS PGothic', sans-serif;
   color: @base-font-color;
   background: @background-color;
   margin: 0;
@@ -10,6 +10,7 @@ body {
     font-size: 87.5%; // 14px
   }
 }
+
 // typography
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
@@ -23,24 +24,18 @@ h1, h2, h3, h4, h5, h6 {
   margin: 28px auto 8px;
 }
 h1 {
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-weight: bold;
 } 
 h2 {
-  font-size: 1.5em;
-}
-h3 {
-  font-size: 1.25em;
+  font-size: 1.1em;
   font-weight: bold;
 }
-h4 {
-  font-size: 1.25em;
-}
-h5 {
+h3 {
   font-size: 1em;
   font-weight: bold;
 }
-h6 {
+h4, h5, h6 {
   font-size: 1em;
   font-weight: 300;
 }
@@ -50,6 +45,7 @@ p {
   line-height: 1.9;
   margin: 0 auto 1em;
 }
+
 // links
 a {
   color: @theme-color;
@@ -62,16 +58,19 @@ a {
   &:focus { color: @theme-color-darken; }
   &:active { color: @theme-color-darken; }
 }
+
 // hr
 hr {
   margin: 2em auto;
   border-width: 0;
   border-top: 1px solid @line-color;
 }
+
 // iframe
 iframe {
   margin: 0 auto 1em;
 }
+
 // containerは1番大きなdivで全ての箱である
 #container {
   width: 100%;
@@ -80,14 +79,7 @@ iframe {
   box-sizing: border-box;
 }
 #content-inner {
-  width: 960px;
-  display: flex;
-  align-content: center;
-  justify-content: space-between;
+  width: 100%;
+  max-width: 600px;
   margin: 0 auto;
-  @media @viewport-970 {
-    display: block;
-    width: 100%;
-    max-width: 650px;
-  }
 }

@@ -21,9 +21,8 @@
     border-bottom: 1px solid @line-color-lighten;
     position: relative;
     .date {
-      font-size: .65em;
+      font-size: .75em;
       line-height: 1;
-      font-weight: bold;
       a {
         color: @base-font-lighten;
         &:hover {
@@ -50,15 +49,12 @@
 
 // category
 .breadcrumb {
-  width: 970px;
+  width: 100%;
+  max-width: 600px;
   font-size: .8em;
   margin: 0 auto 48px;
   padding: 0 0 1em;
   border-bottom: 1px solid @line-color-lighten;
-  @media @viewport-970 {
-    width: 100%;
-    max-width: 650px;
-  }
   a {
     color: @base-font-color;
     &:hover {

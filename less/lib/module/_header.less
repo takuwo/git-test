@@ -2,25 +2,20 @@
   margin: 2em auto 4em;
 }
 #blog-title-inner {
-  width: 960px;
+  width: 100%;
+  max-width: 600px;
   margin: 0 auto;
   text-align: left;
-  @media @viewport-970 {
-    text-align: center;
-    width: 100%;
-    max-width: 650px;
-  }
-    @media @viewport-580 {
-    height: 100%;
-  }
 }
 .header-image-enable {
    #blog-title-content {
-     .vertical-align();
+     position: relative;
+     top: 50%;
+     transform: translatey(-50%)
   }
 }
 #title {
-  font-size: 2em;
+  font-size: 1.2em;
   margin-top: 0;
   padding: 0;
   margin: 0 auto 10px;
