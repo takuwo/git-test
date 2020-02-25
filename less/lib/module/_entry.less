@@ -57,6 +57,7 @@
   right: 0;
   @media @viewport-580 {
     position: static;
+    margin: .5em 0 0;
   }
   a {
     color: @base-font-lighten;
@@ -86,6 +87,14 @@
 .entry-content {
   margin: 0 auto 2em;
   // fotolife
+  .full-width-image {
+    @media @viewport-580 {
+      margin: 0 -20px;
+      .hatena-fotolife {
+        border-radius: 0;
+      }
+    }
+  }
   .hatena-fotolife {
     border-radius: 3px;
   }

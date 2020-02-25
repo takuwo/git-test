@@ -558,6 +558,7 @@ iframe {
 @media screen and (max-width: 580px) {
   .categories {
     position: static;
+    margin: 0.5em 0 0;
   }
 }
 .categories a {
@@ -583,6 +584,14 @@ iframe {
 }
 .entry-content {
   margin: 0 auto 2em;
+}
+@media screen and (max-width: 580px) {
+  .entry-content .full-width-image {
+    margin: 0 -20px;
+  }
+  .entry-content .full-width-image .hatena-fotolife {
+    border-radius: 0;
+  }
 }
 .entry-content .hatena-fotolife {
   border-radius: 3px;
