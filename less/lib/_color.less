@@ -1,23 +1,57 @@
-// Color scheme
-// @background-color:       #fcfcfc;
-@background-color:       #fff;
-@theme-color:            #189BC6;
-@theme-color-darken:     darken(@theme-color, 20%);
-@theme-color-lighten:    lighten(@theme-color, 20%);
-@line-color:             #dfe5e7;
-@line-color-lighten:     lighten(@line-color, 5%);
-@base-font-color:        #3a3939;
-@base-font-darken:       #222;
-@base-font-light:        lighten(@base-font-color, 10%);
-@base-font-lighten:      #888;
+// Todo: darken, lightenはやめる
+:root {
+  @media (prefers-color-scheme: light) {
+    --background-color:       #ffffff;
+    --theme-color:            #189BC6;
+    // --theme-color-darken:     darken(var(--theme-color), 20%);
+    // --theme-color-lighten:    lighten(var(--theme-color), 20%);
+    --line-color:             #dfe5e7;
+    // --line-color-lighten:     lighten(var(--line-color), 5%);
+    --base-font-color:        #3a3939;
+    --base-font-darken:       #222;
+    // --base-font-light:        lighten(var(--base-font-color), 10%);
+    --base-font-lighten:      #888;
+    --fff:                    #fff;
+    --black-000:              #000;
+    --black-111:              #111;
+    --e2e2e2:                 #e2e2e2;
+    --b4b4b4:                 #b4b4b4;
+  }
+  @media (prefers-color-scheme: dark) {
+    --background-color:       #111;
+    // --theme-color:            darken(#189BC6, 20%);
+    // --theme-color-darken:     darken(var(--theme-color), 20%);
+    // --theme-color-lighten:    lighten(var(--theme-color), 20%);
+    --line-color:             #dfe5e7;
+    // --line-color-lighten:     lighten(var(--line-color), 5%);
+    --base-font-color:        #3a3939;
+    --base-font-darken:       #ddd;
+    // --base-font-light:        lighten(var(--base-font-colo)r, 10%);
+    --base-font-lighten:      #888;
+    --fff:                    #000;
+    --black-000:              #fff;
+    --black-111:              #eee;
+    --e2e2e2:                 #e2e2e2;
+    --b4b4b4:                 #b4b4b4;
+  }
+}
 
-// @theme-color:            #0aaadc;
-// @base-font-darken:       darken(@base-font-color, 20%);
-// @base-font-lighten:      lighten(@base-font-color, 20%);
+@background-color:     var(--background-color);
+@theme-color:          var(--theme-color);
+@theme-color-darken:   var(--theme-color-darken);
+@theme-color-lighten:  var(--theme-color-lighten);
+@line-color:           var(--line-color);
+@line-color-lighten:   var(--line-color-lighten);
+@base-font-color:      var(--base-font-color);
+@base-font-darken:     var(--base-font-darken);
+@base-font-light:      var(--base-font-light);
+@base-font-lighten:    var(--base-font-lighten);
+@fff:                  var(--fff);
+@000:                  var(--black-000);
+@111:                  var(--black-111);
+@e2e2e2:               var(--e2e2e2);
+@b4b4b4:               var(--b4b4b4);
 
-@fff:                    #fff;
-@000:                    #000;
-@111:                    #111;
-
-@e2e2e2:                 #e2e2e2;
-@b4b4b4:                 #b4b4b4;
+  // @theme-color:            #0aaadc;
+  // @base-font-darken:       darken(@base-font-color, 20%);
+  // @base-font-lighten:      lighten(@base-font-color, 20%);
