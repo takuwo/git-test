@@ -555,27 +555,7 @@ iframe {
   color: #3a3939;
 }
 .categories {
-  font-size: 0.75em;
-  line-height: 1;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-@media screen and (max-width: 580px) {
-  .categories {
-    position: static;
-    margin: 0.5em 0 0;
-  }
-}
-.categories a {
-  color: #888;
-}
-.categories a:hover {
-  color: #888;
-  text-decoration: none;
-}
-.categories a:before {
-  content: "#";
+  display: none;
 }
 .entry-header-menu {
   position: absolute;
@@ -950,7 +930,6 @@ iframe {
 .keyword:hover {
   color: #189BC6;
   border-bottom: none;
-  border-top: 0;
 }
 .author,
 .comment-metadata time {
