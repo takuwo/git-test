@@ -1081,6 +1081,7 @@ iframe {
 .page-archive .archive-entry .entry-title {
   font-size: 1.1em;
   line-height: 1.4;
+  margin-bottom: 0.5em;
 }
 .page-archive .archive-entry .categories {
   margin: 0 0 1em;
