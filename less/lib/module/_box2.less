@@ -10,10 +10,10 @@ margin: 0 0 40px;
   margin: auto;
 }
 a {
-  color: @base-font-darken;
+  color: @base-font-color-dark;
   text-decoration: none;
   &:hover {
-    color: @base-font-darken;
+    color: @base-font-color-dark;
     text-decoration: underline;
   }
 }
@@ -28,7 +28,7 @@ a {
   font-size: .8em;
   font-weight: bold;
   line-height: 1.2;
-  color: @base-font-darken;
+  color: @base-font-color-dark;
   margin-bottom: 10px;
 }
 .hatena-module-body p {
@@ -90,31 +90,29 @@ a {
 // search-module
 .search-form {
   width: 100%;
-  background: @fff;
+  background: @background-color;
   position: relative;
   margin: 0 0 25px;
 }
 .search-module-input {
-  border-radius: 2px;
-  border: 0;
-  @search-form: #f6f7f8;
-  @search-from-dark: darken(@search-form, 2%);
-  background-color: @search-form;
+  color: @base-font-color;
+  background-color: @search-form-color;
   width: 100%;
-  padding: 10px 7px 10px 14px;
-  border-radius: 19px;
+  height: 40px;
   box-sizing: border-box;
-  &:hover {
+  border-radius: 20px;
+  border: 0;
+  padding: 10px 7px 10px 14px;
+  &:hover,
+  &:focus {
     border: 0;
-    background: @search-from-dark;
+    background: @search-form-color-dark;
   }
   &:focus {
     outline: none;
-    border: 0;
-    background: @search-from-dark;
   }
   &::placeholder {
-    color: lighten(#949495, 10%);
+    color: @base-font-color-lighten;
   }
 }
 .search-module-button {
