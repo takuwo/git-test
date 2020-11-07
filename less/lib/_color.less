@@ -1,16 +1,23 @@
 // Todo: darken, lightenはやめる
 :root {
   @media (prefers-color-scheme: light) {
-    --background-color:       #ffffff;
+    --background-color:       #fff;
+
     --theme-color:            #189BC6;
-    // --theme-color-darken:     darken(var(--theme-color), 20%);
-    // --theme-color-lighten:    lighten(var(--theme-color), 20%);
+    --theme-color-dark:       darken(#189BC6, 5%);
+    --theme-color-light:      lighten(#189BC6, 5%);
+
     --line-color:             #dfe5e7;
-    // --line-color-lighten:     lighten(var(--line-color), 5%);
+    --line-color-light:       lighten(#dfe5e7, 5%);
+
     --base-font-color:        #3a3939;
-    --base-font-darken:       #222;
-    // --base-font-light:        lighten(var(--base-font-color), 10%);
-    --base-font-lighten:      #888;
+    --base-font-color-dark:   #222;
+    --base-font-color-light:  lighten(#3a3939, 5%);
+    --base-font-color-lighten:lighten(#3a3939, 8%);
+
+    --search-form-color:      #f6f7f8;
+    --search-form-color-dark: darken(#f6f7f8, 2%);
+
     --fff:                    #fff;
     --black-000:              #000;
     --black-111:              #111;
@@ -19,16 +26,23 @@
   }
   @media (prefers-color-scheme: dark) {
     --background-color:       #111;
-    // --theme-color:            darken(#189BC6, 20%);
-    // --theme-color-darken:     darken(var(--theme-color), 20%);
-    // --theme-color-lighten:    lighten(var(--theme-color), 20%);
-    --line-color:             #dfe5e7;
-    // --line-color-lighten:     lighten(var(--line-color), 5%);
-    --base-font-color:        #3a3939;
-    --base-font-darken:       #ddd;
-    // --base-font-light:        lighten(var(--base-font-colo)r, 10%);
-    --base-font-lighten:      #888;
-    --fff:                    #000;
+
+    --theme-color:            #137c9e;
+    --theme-color-dark:       darken(#137c9e, 5%);
+    --theme-color-light:      lighten(#137c9e, 5%);
+
+    --line-color:             #161617;
+    --line-color-light:       lighten(#161617, 5%);
+
+    --base-font-color:        #999;
+    --base-font-color-dark:   #aaa;
+    --base-font-color-light:  darken(#999, 5%);
+    --base-font-color-lighten:darken(#999, 10%);
+
+    --search-form-color:      #1d1d1d;
+    --search-form-color-dark: darken(#1d1d1d, 2%);
+
+    --fff:                    #111;
     --black-000:              #fff;
     --black-111:              #eee;
     --e2e2e2:                 #e2e2e2;
@@ -36,22 +50,24 @@
   }
 }
 
-@background-color:     var(--background-color);
-@theme-color:          var(--theme-color);
-@theme-color-darken:   var(--theme-color-darken);
-@theme-color-lighten:  var(--theme-color-lighten);
-@line-color:           var(--line-color);
-@line-color-lighten:   var(--line-color-lighten);
-@base-font-color:      var(--base-font-color);
-@base-font-darken:     var(--base-font-darken);
-@base-font-light:      var(--base-font-light);
-@base-font-lighten:    var(--base-font-lighten);
-@fff:                  var(--fff);
-@000:                  var(--black-000);
-@111:                  var(--black-111);
-@e2e2e2:               var(--e2e2e2);
-@b4b4b4:               var(--b4b4b4);
+@background-color:       var(--background-color);
+@theme-color:            var(--theme-color);
+@theme-color-dark:       var(--theme-color-dark);
+@theme-color-light:      var(--theme-color-light);
 
-  // @theme-color:            #0aaadc;
-  // @base-font-darken:       darken(@base-font-color, 20%);
-  // @base-font-lighten:      lighten(@base-font-color, 20%);
+@line-color:             var(--line-color);
+@line-color-light:       var(--line-color-light);
+
+@base-font-color:        var(--base-font-color);
+@base-font-color-dark:   var(--base-font-color-dark);
+@base-font-color-light:  var(--base-font-color-light);
+@base-font-color-lighten:var(--base-font-color-lighten);
+
+@search-form-color:      var(--search-form-color);
+@search-form-color-dark: var(--search-form-color-dark);
+
+@fff:                    var(--fff);
+@000:                    var(--black-000);
+@111:                    var(--black-111);
+@e2e2e2:                 var(--e2e2e2);
+@b4b4b4:                 var(--b4b4b4);
