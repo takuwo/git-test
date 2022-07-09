@@ -362,6 +362,7 @@ template {
     --theme-color-light: #1baddd;
     --line-color: #dfe5e7;
     --line-color-light: #eef1f2;
+    --line-color-alpha: #dfe5e780;
     --base-font-color: #3a3939;
     --base-font-color-dark: #222;
     --base-font-color-light: #474646;
@@ -383,6 +384,7 @@ template {
     --theme-color-light: #168eb5;
     --line-color: #161617;
     --line-color-light: #222224;
+    --line-color-alpha: #161617b3;
     --base-font-color: #999;
     --base-font-color-dark: #aaa;
     --base-font-color-light: #8c8c8c;
@@ -423,7 +425,7 @@ template {
           transform: translatey(-50%);
 }
 #title {
-  font-size: 1.2em;
+  font-size: 1.2rem;
   margin-top: 0;
   padding: 0;
   margin: 0 auto 10px;
@@ -1035,6 +1037,74 @@ iframe {
 .hatena-module-related-entries .related-entries-entry-body {
   font-size: 0.85em;
   color: var(--base-font-color-lighten);
+}
+.page-entry #container {
+  position: relative;
+}
+.page-entry #blog-title {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: var(--background-color);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 50px;
+  padding: 10px 20px;
+  margin: 0 -20px 1rem;
+}
+.page-entry #blog-title::before,
+.page-entry #blog-title::after {
+  content: "";
+  display: block;
+  width: calc(100% + 20px);
+  left: -20px;
+}
+.page-entry #blog-title::before {
+  position: absolute;
+  bottom: 0;
+  border-bottom: 1px solid var(--line-color-light);
+}
+.page-entry #blog-title::after {
+  position: fixed;
+  top: calc(56px + 49px);
+  bottom: 0;
+  border-bottom: 1px solid var(--background-color);
+  height: 0;
+}
+.page-entry #title {
+  font-size: 0.85rem;
+  font-weight: normal;
+  text-align: center;
+  position: relative;
+  margin-bottom: 0;
+}
+.page-entry #title > a {
+  padding-left: 1rem;
+}
+.page-entry #title > a::before {
+  font-family: "Material Icons";
+  content: "\e5e0";
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.page-entry #content {
+  margin-top: 2em;
+}
+.page-entry .entry-header {
+  position: relative;
+}
+.page-entry .customized-header {
+  position: absolute;
 }
 .page-about .entry-content {
   margin: 0 auto 0;
