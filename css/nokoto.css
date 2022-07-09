@@ -457,11 +457,6 @@ body {
   margin: 0;
   letter-spacing: 1px;
 }
-@media screen and (max-width: 580px) {
-  body {
-    font-size: 87.5%;
-  }
-}
 h1,
 h2,
 h3,
@@ -790,6 +785,9 @@ iframe {
 }
 #box2-inner .hatena-module-profile .hatena-module-body:after {
   clear: both;
+}
+#box2-inner .hatena-module-profile .profile-about {
+  display: none;
 }
 #box2-inner .profile-icon-link {
   float: left;
