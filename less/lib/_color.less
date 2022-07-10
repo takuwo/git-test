@@ -2,6 +2,8 @@
 :root {
   @media (prefers-color-scheme: light) {
     --background-color: #fff;
+    --background-color-gray: #eee;
+    --background-color-gray-dark: darken(#eee, 5%);
 
     --theme-color: #189bc6;
     --theme-color-dark: darken(#189bc6, 5%);
@@ -27,6 +29,8 @@
   }
   @media (prefers-color-scheme: dark) {
     --background-color: #111;
+    --background-color-gray: #242424;
+    --background-color-gray-dark: lighten(#242424, 5%);
 
     --theme-color: #137c9e;
     --theme-color-dark: darken(#137c9e, 5%);
@@ -53,6 +57,9 @@
 }
 
 @background-color: var(--background-color);
+@background-color-gray: var(--background-color-gray);
+@background-color-gray-dark: var(--background-color-gray-dark);
+
 @theme-color: var(--theme-color);
 @theme-color-dark: var(--theme-color-dark);
 @theme-color-light: var(--theme-color-light);

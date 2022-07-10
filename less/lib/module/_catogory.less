@@ -18,12 +18,31 @@
           border-radius: 100vh;
           padding: 0.5rem 0.75rem;
           &:hover,
-          &:focus {
+          &:focus,
+          &:focus-visible {
             text-decoration: none !important;
             background: @search-form-color-dark;
           }
         }
       }
+    }
+  }
+}
+
+// タグ
+a.entry-tag-link,
+a.archive-entry-tag-link {
+  background-color: @search-form-color !important;
+  color: @base-font-color-light !important;
+  border: none !important;
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    background-color: @search-form-color-dark !important;
+  }
+  svg {
+    path {
+      fill: @base-font-color-lighten !important;
     }
   }
 }

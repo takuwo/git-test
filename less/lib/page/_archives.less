@@ -17,22 +17,39 @@
   // 一覧
   .archive-entries {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
-    gap: 4rem 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 3.5rem 2rem;
   }
   .archive-entry {
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin-bottom: 2rem;
+    @media @pc {
+      position: relative;
+    }
+    &::before {
+      @media @pc {
+        content: "";
+        display: block;
+        padding-top: calc(~"1 / 1.6 * 100%");
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 0.5rem;
+        border: 1px solid @border-color-light;
+      }
+    }
 
+    .archive-entry-header {
+      margin-top: 1rem;
+    }
     .date {
       font-size: 0.75rem;
       line-height: 1;
       a {
         color: @base-font-color-lighten;
         &:hover,
-        &:focus {
+        &:focus,
+        &:focus-visible {
           color: @base-font-color-lighten;
         }
       }
@@ -50,19 +67,31 @@
     }
     .entry-thumb-link {
       display: block;
-      order: -1;
-      margin-bottom: 1rem;
-    }
-    .entry-thumb {
-      float: none;
-      height: 100%;
       width: 100%;
-      border-radius: 0.5rem;
-      margin-right: 0;
-      &::before {
-        content: "";
-        display: block;
-        padding-top: calc(~"1 / 1.6 * 100%");
+      order: -1;
+      @media @pc {
+        position: absolute;
+        top: 0;
+      }
+      &:hover,
+      &:focus,
+      &:focus-visible {
+        opacity: 0.8;
+      }
+      .entry-thumb {
+        float: none;
+        height: 100%;
+        width: 100%;
+        border-radius: 0.5rem;
+        margin-right: 0;
+        &::before {
+          content: "";
+          display: block;
+          padding-top: calc(~"1 / 1.6 * 100%");
+          box-sizing: border-box;
+          border-radius: 0.5rem;
+          border: 1px solid @border-color-alpha;
+        }
       }
     }
     .entry-description {

@@ -15,7 +15,8 @@
   border: 0;
   padding: 10px 7px 10px 14px;
   &:hover,
-  &:focus {
+  &:focus,
+  &:focus-visible {
     border: 0;
     background: @search-form-color-dark;
   }
@@ -35,12 +36,15 @@
   margin: auto;
   right: 14px;
   border: none;
-  background: url("http://blog.hatena.ne.jp/images/theme/search@2x.png") no-repeat right center;
+  background: url("http://blog.hatena.ne.jp/images/theme/search@2x.png")
+    no-repeat right center;
   background-size: 20px 20px;
   text-indent: -999px;
   cursor: pointer;
   opacity: 0.4;
-  &:hover {
-    opacity: .8;
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    opacity: 0.8;
   }
 }

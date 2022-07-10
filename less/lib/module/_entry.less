@@ -13,7 +13,9 @@
   text-align: left;
   a {
     color: @base-font-color-lighten;
-    &:hover {
+    &:hover,
+    &:focus,
+    &:focus-visible {
       color: @base-font-color-lighten;
       text-decoration: none;
     }
@@ -31,7 +33,9 @@
   position: relative;
   a {
     color: @base-font-color-dark;
-    &:hover {
+    &:hover,
+    &:focus,
+    &:focus-visible {
       text-decoration: none;
       color: @base-font-color-dark;
     }
@@ -47,7 +51,7 @@
   // position: absolute;
   // top: 0;
   // right: 0;
-  // @media @viewport-580 {
+  // @media @sp {
   //   position: static;
   //   margin: .5em 0 0;
   // }
@@ -81,7 +85,7 @@
   margin: 0 auto 2em;
   // fotolife
   .full-width-image {
-    @media @viewport-580 {
+    @media @sp {
       margin: 0 -20px;
       .hatena-fotolife {
         border-radius: 0;
@@ -118,7 +122,9 @@
     background-color: white;
     margin: 0;
     padding: 0;
-    &:hover {
+    &:hover,
+    &:focus,
+    &:focus-visible {
       background: @background-color;
     }
   }
@@ -185,7 +191,9 @@
   color: @base-font-color-lighten;
   a {
     color: @base-font-color-lighten;
-    &:hover {
+    &:hover,
+    &:focus,
+    &:focus-visible {
       color: @base-font-color-lighten;
     }
   }
