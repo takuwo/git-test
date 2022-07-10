@@ -1034,12 +1034,6 @@ iframe {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
-.page-entry .entry-header {
-  position: relative;
-}
-.page-entry .customized-header {
-  position: absolute;
-}
 .page-about .entry-content {
   margin: 0 auto 0;
 }
