@@ -973,33 +973,28 @@ iframe {
 .page-entry #container {
   max-width: 40rem;
 }
-.page-about .entry-content {
-  margin: 0 auto 0;
+.page-about #box2 {
+  display: none;
 }
-.page-about .entry-content dl {
-  margin: 0 auto;
+.page-about .entry-content a {
+  color: var(--base-font-color-dark);
 }
 .page-about .entry-content dt {
-  font-size: 1.071em;
+  font-size: 1rem;
   font-weight: bold;
   line-height: 1.2;
-  margin: 24px auto 10px auto;
-  color: var(--theme-color);
-}
-.page-about .entry-content dt:first-child {
-  padding: 80px 0 0 4px;
-  margin: 0 auto 10px -7px;
-  border-left: 3px solid var(--theme-color);
-  line-height: 0.9em;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
 }
 .page-about .entry-content dd {
   margin: 0;
-  line-height: 1.7;
 }
 .page-archive #top-box {
   display: none;
 }
 .page-archive .archive-header-category {
+  border-bottom: 1px solid var(--border-color-light);
+  padding-bottom: 0.5rem;
   margin-bottom: 2rem;
 }
 .page-archive .archive-entries {
