@@ -433,7 +433,7 @@ template {
 }
 body {
   font-size: 100%;
-  font-family: 'Noto Sans Japanese', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Helvetica', 'Hiragino Kaku Gothic Pro', 'Meiryo', 'MS PGothic', sans-serif;
+  font-family: "Noto Sans Japanese", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Helvetica", "Hiragino Kaku Gothic Pro", "Meiryo", "MS PGothic", sans-serif;
   color: var(--base-font-color);
   background: var(--background-color);
   margin: 0;
@@ -518,7 +518,7 @@ iframe {
   width: 100%;
   max-width: 60rem;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 1.25rem 3rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -688,167 +688,26 @@ iframe {
 .entry-footer-section a:hover {
   color: var(--base-font-color-lighten);
 }
-#box2-inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100%;
-  margin: 0 0 40px;
-}
-@media screen and (max-width: 580px) {
-  #box2-inner {
-    margin: auto;
-  }
-}
-#box2-inner a {
+#box2 a {
   color: var(--base-font-color-dark);
   text-decoration: none;
 }
-#box2-inner a:hover {
+#box2 a:hover {
   color: var(--base-font-color-dark);
   text-decoration: underline;
 }
-#box2-inner .hatena-module {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 48%;
-          flex: 0 1 48%;
+#box2 .hatena-module + .hatena-module {
+  margin-top: 1.5rem;
 }
-#box2-inner .hatena-module:first-child,
-#box2-inner .hatena-module:nth-child(2) {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 100%;
-          flex: 0 1 100%;
-}
-#box2-inner .hatena-module-title {
-  font-size: 0.8em;
+#box2 .hatena-module-title {
+  font-size: 0.85rem;
   font-weight: bold;
   line-height: 1.2;
   color: var(--base-font-color-dark);
   margin-bottom: 10px;
 }
-#box2-inner .hatena-module-body p {
+#box2 .hatena-module-body p {
   line-height: 1.6;
-}
-#box2-inner .hatena-urllist {
-  padding-left: 0;
-  margin: 0 auto 14px;
-}
-#box2-inner .hatena-urllist li {
-  list-style: none;
-  font-size: 0.9em;
-  line-height: 1.8;
-}
-#box2-inner .hatena-urllist li .urllist-title-link {
-  font-size: 100%;
-}
-#box2-inner .hatena-module-profile {
-  margin: 0 0 20px;
-}
-#box2-inner .hatena-module-profile .hatena-module-body {
-  zoom: 1;
-}
-#box2-inner .hatena-module-profile .hatena-module-body:before,
-#box2-inner .hatena-module-profile .hatena-module-body:after {
-  content: "";
-  display: table;
-}
-#box2-inner .hatena-module-profile .hatena-module-body:after {
-  clear: both;
-}
-#box2-inner .hatena-module-profile .profile-about {
-  display: none;
-}
-#box2-inner .profile-icon-link {
-  float: left;
-  width: 60px;
-  margin: 0 20px 0 0;
-}
-#box2-inner .profile-icon-link .profile-icon {
-  border-radius: 50%;
-}
-#box2-inner .id {
-  float: right;
-  font-size: 14px;
-  width: calc(100% - 80px);
-  margin: 0 0 0.5em;
-}
-#box2-inner .profile-description {
-  float: right;
-  width: calc(100% - 80px);
-}
-#box2-inner .profile-description p {
-  font-size: 12px;
-  margin: 0 auto 0.5em;
-}
-#box2-inner .profile-description a {
-  text-decoration: underline;
-}
-#box2-inner .hatena-follow-button-box {
-  float: right;
-  width: calc(100% - 80px);
-  clear: none;
-  margin: 0;
-  height: auto;
-}
-#box2-inner .search-form {
-  width: 100%;
-  background: var(--background-color);
-  position: relative;
-  margin: 0 0 25px;
-}
-#box2-inner .search-module-input {
-  color: var(--base-font-color);
-  background-color: var(--search-form-color);
-  width: 100%;
-  height: 40px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-radius: 20px;
-  border: 0;
-  padding: 10px 7px 10px 14px;
-}
-#box2-inner .search-module-input:hover,
-#box2-inner .search-module-input:focus {
-  border: 0;
-  background: var(--search-form-color-dark);
-}
-#box2-inner .search-module-input:focus {
-  outline: none;
-}
-#box2-inner .search-module-input::-webkit-input-placeholder {
-  color: var(--base-font-color-lighten);
-}
-#box2-inner .search-module-input::-moz-placeholder {
-  color: var(--base-font-color-lighten);
-}
-#box2-inner .search-module-input::-ms-input-placeholder {
-  color: var(--base-font-color-lighten);
-}
-#box2-inner .search-module-input::placeholder {
-  color: var(--base-font-color-lighten);
-}
-#box2-inner .search-module-button {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  right: 14px;
-  border: none;
-  background: url("http://blog.hatena.ne.jp/images/theme/search@2x.png") no-repeat right center;
-  background-size: 20px 20px;
-  text-indent: -999px;
-  cursor: pointer;
-  opacity: 0.4;
-}
-#box2-inner .search-module-button:hover {
-  opacity: 0.8;
 }
 .pager {
   display: table;
@@ -1009,6 +868,53 @@ iframe {
 .hatena-module-related-entries .related-entries-entry-body {
   font-size: 0.85em;
   color: var(--base-font-color-lighten);
+}
+.hatena-module-profile .hatena-module-body {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 0.5rem 1.5rem;
+}
+.hatena-module-profile .profile-icon-link {
+  grid-column: 1;
+  grid-row: span 4;
+}
+.hatena-module-profile .profile-icon-link .profile-icon {
+  border-radius: 50%;
+}
+.hatena-module-profile .id {
+  grid-column: 2;
+  font-size: 0.85rem;
+}
+.hatena-module-profile .profile-description {
+  grid-column: 2;
+}
+.hatena-module-profile .profile-description p {
+  font-size: 0.75rem;
+  margin: 0 auto;
+}
+.hatena-module-profile .profile-description a {
+  text-decoration: underline;
+}
+.hatena-module-profile .hatena-follow-button-box {
+  grid-column: 2;
+  margin: 0;
+}
+.hatena-module-profile .profile-about {
+  display: none;
+}
+.hatena-module-category .hatena-urllist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1.25rem 1rem;
+  padding: 0;
+  margin: 0;
+}
+.hatena-module-category .hatena-urllist li {
+  list-style: none;
+  font-size: 0.85rem;
 }
 .page-entry #container {
   max-width: 40rem;
