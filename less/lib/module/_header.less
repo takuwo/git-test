@@ -1,13 +1,24 @@
 #blog-title {
-  margin: 2em auto 4em;
+  margin: 1rem auto 1.5rem;
 }
 #title {
-  font-size: 1.2rem;
+  font-size: 0.85rem;
+  font-weight: normal;
+  position: relative;
   margin: 0;
-  a {
-    display: block;
+  > a {
+    display: inline-block;
     padding: 1rem 0 1rem 1rem;
     color: @base-font-color-dark;
+    &::before {
+      font-family: "Material Icons";
+      content: "\e5e0";
+      font-size: 1rem;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
     &:hover,
     &:focus {
       text-decoration: none;

@@ -2,65 +2,92 @@
 // top - archive - search-result
 
 .page-archive {
-  .archive-entries {
-    margin: 0 auto 3em;
+  // カテゴリーのパンくずリスト
+  #top-box {
+    display: none;
   }
+
+  // カテゴリーヘッダー
   .archive-header-category {
-    margin: 0 0 2em;
+    margin-bottom: 2rem;
   }
-  .archive-heading {
-    font-size: 1.4em;
-    font-weight: bold;
-    margin: 0 0 1em;
-    &:before {
-      content: "#";
-    }
+
+  // 一覧
+  .archive-entries {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    gap: 4rem 2rem;
   }
   .archive-entry {
-    margin: 0 auto 3em;
-    padding: 0 0 3em;
-    border-bottom: 1px solid @border-color-light;
-    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+
     .date {
-      font-size: 0.75em;
+      font-size: 0.75rem;
       line-height: 1;
       a {
         color: @base-font-color-lighten;
-        &:hover {
+        &:hover,
+        &:focus {
           color: @base-font-color-lighten;
         }
       }
     }
     .entry-title {
-      font-size: 1.1em;
+      font-size: 1.125rem;
       line-height: 1.4;
-      margin-bottom: 0.5em;
+      margin-bottom: 0.5rem;
     }
     .categories {
-      margin: 0 0 1em;
+      margin-bottom: 1rem;
       a:first-child {
-        margin: 0;
+        margin-bottom: 0;
+      }
+    }
+    .entry-thumb-link {
+      display: block;
+      order: -1;
+      margin-bottom: 1rem;
+    }
+    .entry-thumb {
+      float: none;
+      height: 100%;
+      width: 100%;
+      border-radius: 0.5rem;
+      margin-right: 0;
+      &::before {
+        content: "";
+        display: block;
+        padding-top: calc(~"1 / 1.6 * 100%");
       }
     }
     .entry-description {
-      font-size: 0.85em;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      font-size: 0.85rem;
       color: @base-font-color-light;
     }
+  }
+  .autopagerize_insert_before {
+    justify-content: flex-end;
+    border-bottom: none;
   }
 }
 
 // category
-.breadcrumb {
-  width: 100%;
-  max-width: 600px;
-  font-size: 0.8em;
-  margin: 0 auto 48px;
-  padding: 0 0 1em;
-  border-bottom: 1px solid @border-color-light;
-  a {
-    color: @base-font-color;
-    &:hover {
-      color: @base-font-color;
-    }
-  }
-}
+// .breadcrumb {
+//   font-size: 0.75rem;
+//   margin: 0 auto 3rem;
+//   padding: 0 0 1rem;
+//   border-bottom: 1px solid @border-color-light;
+//   a {
+//     color: @base-font-color;
+//     &:hover {
+//       color: @base-font-color;
+//     }
+//   }
+// }
