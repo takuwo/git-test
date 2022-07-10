@@ -1,15 +1,29 @@
 // カテゴリー
-
-.hatena-module-category {
-  .hatena-urllist {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.25rem 1rem;
-    padding: 0;
-    margin: 0;
-    li {
-      list-style: none;
-      font-size: 0.85rem;
+#box2 {
+  .hatena-module-category {
+    .hatena-urllist {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 0.5rem;
+      padding: 0;
+      margin: 0;
+      li {
+        list-style: none;
+        a {
+          display: inline-block;
+          font-size: 0.75rem;
+          box-sizing: border-box;
+          background: @search-form-color;
+          border: 1px solid @border-color;
+          border-radius: 100vh;
+          padding: 0.5rem 0.75rem;
+          &:hover,
+          &:focus {
+            text-decoration: none !important;
+            background: @search-form-color-dark;
+          }
+        }
+      }
     }
   }
 }
