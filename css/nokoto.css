@@ -990,7 +990,9 @@ a.entry-tag-link,
 a.archive-entry-tag-link {
   background-color: var(--search-form-color) !important;
   color: var(--base-font-color-light) !important;
-  border: none !important;
+  border: 1px solid var(--border-color) !important;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 a.entry-tag-link:hover,
 a.archive-entry-tag-link:hover,
@@ -1076,7 +1078,7 @@ a.archive-entry-tag-link svg path {
   .page-archive .archive-entry::before {
     content: "";
     display: block;
-    padding-top: calc(1 / 1.6 * 100%);
+    padding-top: calc(3 / 4 * 100%);
     width: 100%;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -1138,7 +1140,7 @@ a.archive-entry-tag-link svg path {
 .page-archive .archive-entry .entry-thumb-link .entry-thumb::before {
   content: "";
   display: block;
-  padding-top: calc(1 / 1.6 * 100%);
+  padding-top: calc(3 / 4 * 100%);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 0.5rem;
