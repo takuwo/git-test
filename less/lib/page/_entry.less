@@ -3,61 +3,28 @@
 
 .page-entry {
   #container {
-    position: relative;
+    max-width: 40rem;
   }
   #blog-title {
-    position: sticky;
-    top: 0;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    background: @background-color;
     box-sizing: border-box;
-    height: 50px;
-    padding: 10px 20px;
-    margin: 0 -20px 1rem;
-    &::before,
-    &::after {
-      content: "";
-      display: block;
-      width: calc(~'100% + 20px');
-      left: -20px;
-    }
-    &::before {
-      position: absolute;
-      bottom: 0;
-      border-bottom: 1px solid @line-color-light;
-    }
-    &::after {
-      position: fixed;
-      top: calc(~'56px + 49px');
-      bottom: 0;
-      border-bottom: 1px solid @background-color;
-      height: 0;
-    }
+    margin: 1rem auto 1.5rem;
   }
   #title {
     font-size: 0.85rem;
     font-weight: normal;
-    text-align: center;
     position: relative;
     margin-bottom: 0;
     > a {
-      padding-left: 1rem;
       &::before {
         font-family: "Material Icons";
         content: "\e5e0";
-        font-size: 1.25rem;
+        font-size: 1rem;
         position: absolute;
         left: 0;
         top: 50%;
         transform: translateY(-50%);
       }
     }
-  }
-
-  #content {
-    margin-top: 2em;
   }
 
   .entry-header {

@@ -412,34 +412,14 @@ template {
 #blog-title {
   margin: 2em auto 4em;
 }
-#blog-title-inner {
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: left;
-}
-.header-image-enable #blog-title-content {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translatey(-50%);
-          transform: translatey(-50%);
-}
 #title {
   font-size: 1.2rem;
-  margin-top: 0;
-  padding: 0;
-  margin: 0 auto 10px;
+  margin: 0;
 }
 #title a {
-  text-decoration: none;
+  display: block;
+  padding: 1rem 0 1rem 1rem;
   color: var(--base-font-color-dark);
-}
-#blog-description {
-  font-size: 0.875em;
-  font-weight: normal !important;
-  border-bottom: none;
-  margin: 0 auto;
-  padding: 0 0 30px;
 }
 #footer {
   display: none;
@@ -536,19 +516,11 @@ iframe {
 }
 #container {
   width: 100%;
+  max-width: 60rem;
   margin: 0 auto;
   padding: 0 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-#content-inner {
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-}
-#wrapper {
-  width: 100%;
-  max-width: 600px;
 }
 .entry {
   border-bottom: 1px solid var(--line-color-light);
@@ -1039,66 +1011,28 @@ iframe {
   color: var(--base-font-color-lighten);
 }
 .page-entry #container {
-  position: relative;
+  max-width: 40rem;
 }
 .page-entry #blog-title {
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: var(--background-color);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  height: 50px;
-  padding: 10px 20px;
-  margin: 0 -20px 1rem;
-}
-.page-entry #blog-title::before,
-.page-entry #blog-title::after {
-  content: "";
-  display: block;
-  width: calc(100% + 20px);
-  left: -20px;
-}
-.page-entry #blog-title::before {
-  position: absolute;
-  bottom: 0;
-  border-bottom: 1px solid var(--line-color-light);
-}
-.page-entry #blog-title::after {
-  position: fixed;
-  top: calc(56px + 49px);
-  bottom: 0;
-  border-bottom: 1px solid var(--background-color);
-  height: 0;
+  margin: 1rem auto 1.5rem;
 }
 .page-entry #title {
   font-size: 0.85rem;
   font-weight: normal;
-  text-align: center;
   position: relative;
   margin-bottom: 0;
-}
-.page-entry #title > a {
-  padding-left: 1rem;
 }
 .page-entry #title > a::before {
   font-family: "Material Icons";
   content: "\e5e0";
-  font-size: 1.5rem;
+  font-size: 1rem;
   position: absolute;
   left: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-}
-.page-entry #content {
-  margin-top: 2em;
 }
 .page-entry .entry-header {
   position: relative;
@@ -1141,7 +1075,7 @@ iframe {
   margin: 0 0 1em;
 }
 .page-archive .archive-heading:before {
-  content: '#';
+  content: "#";
 }
 .page-archive .archive-entry {
   margin: 0 auto 3em;
