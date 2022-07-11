@@ -414,7 +414,8 @@ template {
   clear: both;
 }
 #blog-title {
-  margin: 1rem auto 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 #title {
   font-size: 0.85rem;
@@ -1006,11 +1007,6 @@ a.entry-tag-link svg path,
 a.archive-entry-tag-link svg path {
   fill: var(--base-font-color-lighten) !important;
 }
-@media screen and (min-width: 34.5rem) {
-  .page-index #blog-title {
-    margin: 3rem auto;
-  }
-}
 .page-index #title {
   font-size: 1.2rem;
   font-weight: bold;
@@ -1026,6 +1022,13 @@ a.archive-entry-tag-link svg path {
 .page-index .entry-title a:focus,
 .page-index .entry-title a:focus-visible {
   text-decoration: underline;
+}
+.page-index .entry-description {
+  margin-bottom: 0;
+}
+.page-index .archive-entry-tags-wrapper,
+.page-index .social-buttons {
+  display: none;
 }
 .page-entry #container {
   max-width: 40rem;
@@ -1148,7 +1151,7 @@ a.archive-entry-tag-link svg path {
 }
 .page-archive .archive-entry .entry-description {
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   font-size: 0.85rem;
