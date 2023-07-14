@@ -357,6 +357,7 @@ template {
 @media (prefers-color-scheme: light) {
   :root {
     --background-color: #fff;
+    --background-color-gray-light: #fafafa;
     --background-color-gray: #eee;
     --background-color-gray-dark: #e1e1e1;
     --theme-color: #189bc6;
@@ -381,6 +382,7 @@ template {
 @media (prefers-color-scheme: dark) {
   :root {
     --background-color: #111;
+    --background-color-gray-light: #161616;
     --background-color-gray: #242424;
     --background-color-gray-dark: #313131;
     --theme-color: #137c9e;
@@ -467,9 +469,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: bold;
   line-height: 1.2;
   color: var(--base-font-color-dark);
+  margin: 1.75rem auto 0.5rem;
 }
 h1 .keyword,
 h2 .keyword,
@@ -478,14 +480,6 @@ h4 .keyword,
 h5 .keyword,
 h6 .keyword {
   color: var(--base-font-color-dark);
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 1.75rem auto 0.5rem;
 }
 h1 {
   font-size: 1.2rem;
@@ -540,7 +534,7 @@ iframe {
 }
 #container {
   width: 100%;
-  max-width: 60rem;
+  max-width: 40rem;
   margin: 0 auto;
   padding: 0 1.25rem 3rem;
   -webkit-box-sizing: border-box;
@@ -714,6 +708,9 @@ iframe {
 .entry-footer-section a:focus,
 .entry-footer-section a:focus-visible {
   color: var(--base-font-color-lighten);
+}
+#box2 {
+  margin: 2rem 0;
 }
 #box2 a {
   color: var(--base-font-color-dark);
@@ -1057,57 +1054,43 @@ a.archive-entry-tag-link svg path {
   padding-bottom: 0.5rem;
   margin-bottom: 2rem;
 }
-.page-archive .archive-entries {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  gap: 3.5rem 2rem;
-}
 .page-archive .archive-entry {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-@media screen and (min-width: 34.5rem) {
-  .page-archive .archive-entry {
-    position: relative;
-  }
-}
-@media screen and (min-width: 34.5rem) {
-  .page-archive .archive-entry::before {
-    content: "";
-    display: block;
-    padding-top: calc(3 / 4 * 100%);
-    width: 100%;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    border-radius: 0.5rem;
-    border: 1px solid var(--border-color-light);
-  }
-}
-.page-archive .archive-entry .archive-entry-header {
-  margin-top: 1rem;
+  padding: 1rem 0;
+  position: relative;
 }
 .page-archive .archive-entry .date {
   font-size: 0.75rem;
   line-height: 1;
 }
 .page-archive .archive-entry .date a {
-  color: var(--base-font-color-lighten);
-}
-.page-archive .archive-entry .date a:hover,
-.page-archive .archive-entry .date a:focus,
-.page-archive .archive-entry .date a:focus-visible {
+  pointer-events: none;
   color: var(--base-font-color-lighten);
 }
 .page-archive .archive-entry .entry-title {
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1.4;
-  margin-bottom: 0.5rem;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+.page-archive .archive-entry .entry-title a {
+  display: block;
+  height: calc(100% - 2.25rem);
+  padding-top: 2.25rem;
+}
+.page-archive .archive-entry .entry-title a:hover::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -1rem;
+  z-index: -1;
+  width: calc(100% + 2rem);
+  height: 100%;
+  background: var(--background-color-gray-light);
+  border-radius: 0.5rem;
 }
 .page-archive .archive-entry .categories {
   margin-bottom: 1rem;
@@ -1116,51 +1099,18 @@ a.archive-entry-tag-link svg path {
   margin-bottom: 0;
 }
 .page-archive .archive-entry .entry-thumb-link {
-  display: block;
-  width: 100%;
-  -webkit-box-ordinal-group: 0;
-      -ms-flex-order: -1;
-          order: -1;
-}
-@media screen and (min-width: 34.5rem) {
-  .page-archive .archive-entry .entry-thumb-link {
-    position: absolute;
-    top: 0;
-  }
-}
-.page-archive .archive-entry .entry-thumb-link:hover,
-.page-archive .archive-entry .entry-thumb-link:focus,
-.page-archive .archive-entry .entry-thumb-link:focus-visible {
-  opacity: 0.8;
-}
-.page-archive .archive-entry .entry-thumb-link .entry-thumb {
-  float: none;
-  height: 100%;
-  width: 100%;
-  border-radius: 0.5rem;
-  margin-right: 0;
-}
-.page-archive .archive-entry .entry-thumb-link .entry-thumb::before {
-  content: "";
-  display: block;
-  padding-top: calc(3 / 4 * 100%);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-radius: 0.5rem;
-  border: 1px solid var(--border-color-alpha);
+  display: none;
 }
 .page-archive .archive-entry .entry-description {
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
   font-size: 0.85rem;
   color: var(--base-font-color-light);
+  margin-top: 2.25rem;
 }
 .page-archive .autopagerize_insert_before {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
   border-bottom: none;
 }
 .entry.no-entry {
