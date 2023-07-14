@@ -1,58 +1,58 @@
 // 関連記事モジュール
 
 .hatena-module-related-entries {
-
-.hatena-module-title {
-  font-size: .8em;
-  font-weight: bold;
-  line-height: 1.2;
-  color: @base-font-color-dark;
-  border-top: 1px solid @line-color-light;
-  padding: 30px 0 0;
-  margin: 30px auto 10px;
-}
-ul.related-entries { 
-  padding: 0;
-  margin: 0;
-}
-li.related-entries-item {
-  margin: 0 0 25px;
-}
-.related-entries-date-link {
-  font-size: .75em;
-  line-height: 1;
-  a {
-    color: @base-font-color-lighten;
-    &:hover,
-    &:focus {
+  .hatena-module-title {
+    font-size: 0.8em;
+    font-weight: bold;
+    line-height: 1.2;
+    color: @base-font-color-dark;
+    border-top: 1px solid @border-color-light;
+    padding: 30px 0 0;
+    margin: 30px auto 10px;
+  }
+  ul.related-entries {
+    padding: 0;
+    margin: 0;
+  }
+  li.related-entries-item {
+    margin: 0 0 25px;
+  }
+  .related-entries-date-link {
+    font-size: 0.75em;
+    line-height: 1;
+    a {
       color: @base-font-color-lighten;
+      &:hover,
+      &:focus,
+      &:focus-visible {
+        color: @base-font-color-lighten;
+        text-decoration: none;
+      }
+      &:visited {
+        color: @base-font-color-lighten;
+      }
+    }
+  }
+  .related-entries-title-link {
+    display: block;
+    font-size: 1.1em;
+    font-weight: bold;
+    line-height: 1.4;
+    color: @base-font-color-dark;
+    text-decoration: none;
+    margin: 0.2em auto;
+    &:hover,
+    &:focus,
+    &:focus-visible {
       text-decoration: none;
+      color: @base-font-color-dark;
     }
     &:visited {
-      color: @base-font-color-lighten;
+      color: @base-font-color;
     }
   }
-}
-.related-entries-title-link {
-  display: block;
-  font-size: 1.1em;
-  font-weight: bold;
-  line-height: 1.4;
-  color: @base-font-color-dark;
-  text-decoration: none;
-  margin: .2em auto;
-  &:hover,
-  &:focus {
-    text-decoration: none;
-    color: @base-font-color-dark;
+  .related-entries-entry-body {
+    font-size: 0.85em;
+    color: @base-font-color-lighten;
   }
-  &:visited {
-    color: @base-font-color;
-  }
-}
-.related-entries-entry-body {
-  font-size: .85em;
-  color: @base-font-color-lighten;
-}
-
 }

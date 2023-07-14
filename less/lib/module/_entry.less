@@ -1,14 +1,5 @@
 // entry1つで1つのModule（少し括りが大きいので場合によっては分けてもよい）
 // entry-header・編集ボタン・entry-contentに分けられている
-#wrapper {
-  width: 100%;
-  max-width: 600px;
-}
-.entry {
-  border-bottom: 1px solid @line-color-light;
-  margin: 0 auto 2em;
-  padding: 0 0 2em;
-}
 
 //entry header
 .entry-header {
@@ -17,12 +8,14 @@
 }
 .entry-date {
   font-family: "Avenir", "Helvetica", sans-serif;
-  font-size: .75em;
+  font-size: 0.75em;
   line-height: 1;
   text-align: left;
-    a {
+  a {
     color: @base-font-color-lighten;
-    &:hover {
+    &:hover,
+    &:focus,
+    &:focus-visible {
       color: @base-font-color-lighten;
       text-decoration: none;
     }
@@ -36,11 +29,13 @@
   font-weight: bold;
   text-align: left;
   letter-spacing: 1px;
-  margin: .2em auto 0;
+  margin: 0.2em auto 0;
   position: relative;
   a {
     color: @base-font-color-dark;
-    &:hover {
+    &:hover,
+    &:focus,
+    &:focus-visible {
       text-decoration: none;
       color: @base-font-color-dark;
     }
@@ -56,7 +51,7 @@
   // position: absolute;
   // top: 0;
   // right: 0;
-  // @media @viewport-580 {
+  // @media @sp {
   //   position: static;
   //   margin: .5em 0 0;
   // }
@@ -72,13 +67,14 @@
   //   }
   // }
 }
-.entry-header-menu { // 編集ボタン
+.entry-header-menu {
+  // 編集ボタン
   position: absolute;
   line-height: 1;
   top: 0;
   left: -3em;
   a {
-    font-size: .75em;
+    font-size: 0.75em;
     line-height: 1;
     vertical-align: top;
   }
@@ -89,7 +85,7 @@
   margin: 0 auto 2em;
   // fotolife
   .full-width-image {
-    @media @viewport-580 {
+    @media @sp {
       margin: 0 -20px;
       .hatena-fotolife {
         border-radius: 0;
@@ -101,10 +97,11 @@
   }
   .hatena-image-left,
   .hatena-image-right {
-    margin-right: .875em;
+    margin-right: 0.875em;
   }
   // list
-  ul, ol {
+  ul,
+  ol {
     font-size: 1em;
     line-height: 1.7;
     margin: 0 auto 1em;
@@ -125,50 +122,52 @@
     background-color: white;
     margin: 0;
     padding: 0;
-    &:hover{
+    &:hover,
+    &:focus,
+    &:focus-visible {
       background: @background-color;
     }
   }
   th {
     background: @background-color;
     font-weight: bold;
-    border: 1px solid @line-color;
+    border: 1px solid @border-color;
     padding: 5px 10px;
   }
   td {
-    border: 1px solid @line-color;
+    border: 1px solid @border-color;
     padding: 5px 10px;
   }
   // blockquote
   blockquote {
-    border: 1px solid @line-color;
+    border: 1px solid @border-color;
     background: @fff;
     padding: 1.5em;
     margin: 28px auto;
     border-radius: 3px;
-    &>blockquote {
+    & > blockquote {
       border: none;
-      border-left: 2px solid @line-color;
+      border-left: 2px solid @border-color;
       padding: 0 0 0 1em;
     }
   }
   // code
   .code {
-    font-size: .875em;
+    font-size: 0.875em;
     line-height: 1.7;
     background: @fff;
     margin: 28px auto;
     padding: 1.5em;
-    border: 1px solid @line-color;
+    border: 1px solid @border-color;
     border-radius: 3px;
     overflow: auto;
     white-space: pre-wrap;
     word-wrap: break-word;
   }
   code {
-    font-size: .875em;
+    font-size: 0.875em;
     background: @fff;
-    border: 1px solid @line-color;
+    border: 1px solid @border-color;
     padding: 3px 5px;
   }
   // asin
@@ -187,12 +186,14 @@
 }
 
 .entry-footer-section {
-  font-size: .8em;
+  font-size: 0.8em;
   line-height: 1;
   color: @base-font-color-lighten;
   a {
     color: @base-font-color-lighten;
-    &:hover {
+    &:hover,
+    &:focus,
+    &:focus-visible {
       color: @base-font-color-lighten;
     }
   }

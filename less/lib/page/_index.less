@@ -1,0 +1,29 @@
+.page-index {
+  #title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: static;
+    a {
+      padding: 1rem 0;
+      &::before {
+        display: none;
+      }
+    }
+  }
+  .entry-title {
+    a {
+      &:hover,
+      &:focus,
+      &:focus-visible {
+        text-decoration: underline;
+      }
+    }
+  }
+  .entry-description {
+    margin-bottom: 0;
+  }
+  .archive-entry-tags-wrapper,
+  .social-buttons {
+    display: none;
+  }
+}

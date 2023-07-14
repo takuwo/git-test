@@ -1,7 +1,9 @@
 // body
 body {
   font-size: 100%;
-  font-family: 'Noto Sans Japanese', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Helvetica', 'Hiragino Kaku Gothic Pro', 'Meiryo', 'MS PGothic', sans-serif;
+  font-family: "Noto Sans Japanese", -apple-system, BlinkMacSystemFont,
+    "Helvetica Neue", "Helvetica", "Hiragino Kaku Gothic Pro", "Meiryo",
+    "MS PGothic", sans-serif;
   color: @base-font-color;
   background: @background-color;
   margin: 0;
@@ -9,7 +11,12 @@ body {
 }
 
 // typography
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: bold;
   line-height: 1.2;
   color: @base-font-color-dark;
@@ -17,66 +24,77 @@ h1, h2, h3, h4, h5, h6 {
     color: @base-font-color-dark;
   }
 }
-h1, h2, h3, h4, h5, h6 {
-  margin: 28px auto 8px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 1.75rem auto 0.5rem;
 }
 h1 {
-  font-size: 1.2em;
+  font-size: 1.2rem;
   font-weight: bold;
 }
 h2 {
-  font-size: 1.1em;
+  font-size: 1.1rem;
   font-weight: bold;
 }
 h3 {
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: bold;
 }
-h4, h5, h6 {
-  font-size: 1em;
+h4,
+h5,
+h6 {
+  font-size: 1rem;
   font-weight: 300;
 }
 p {
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: 300;
-  line-height: 1.9;
-  margin: 0 auto 1em;
+  line-height: 1.8;
+  margin: 0 auto 1rem;
 }
 
 // links
 a {
   color: @theme-color;
   text-decoration: none;
-  &:hover {
+  &:hover,
+  &:focus,
+  &:focus-visible {
     color: @theme-color;
     text-decoration: underline;
   }
-  &:visited { color: @theme-color-dark; }
-  &:focus { color: @theme-color-dark; }
-  &:active { color: @theme-color-dark; }
+  &:visited {
+    color: @theme-color-dark;
+  }
+  &:focus {
+    color: @theme-color-dark;
+  }
+  &:active {
+    color: @theme-color-dark;
+  }
 }
 
 // hr
 hr {
-  margin: 2em auto;
+  margin: 2rem auto;
   border-width: 0;
-  border-top: 1px solid @line-color;
+  border-top: 1px solid @border-color;
 }
 
 // iframe
 iframe {
-  margin: 0 auto 1em;
+  margin: 0 auto 1rem;
 }
 
 // containerは1番大きなdivで全ての箱である
 #container {
   width: 100%;
+  max-width: 60rem;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 1.25rem 3rem;
   box-sizing: border-box;
-}
-#content-inner {
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
 }

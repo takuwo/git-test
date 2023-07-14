@@ -1,0 +1,43 @@
+// profile
+#box2 {
+  .hatena-module-profile {
+    .hatena-module-body {
+      display: grid;
+      grid-template-columns: 60px 1fr;
+      gap: 0.5rem 1.5rem;
+    }
+    .profile-icon-link {
+      grid-column: 1;
+      grid-row: span 4;
+      .profile-icon {
+        border-radius: 50%;
+      }
+    }
+    .id {
+      grid-column: 2;
+      font-size: 0.85rem;
+    }
+    .profile-description {
+      grid-column: 2;
+      p {
+        font-size: 0.75rem;
+        margin: 0 auto;
+      }
+      a {
+        text-decoration: underline;
+        &:hover,
+        &:focus,
+        &:focus-visible {
+          color: var(--theme-color-dark);
+        }
+      }
+    }
+    .hatena-follow-button-box {
+      grid-column: 2;
+      margin: 0;
+    }
+    .profile-about {
+      display: none;
+    }
+  }
+}
