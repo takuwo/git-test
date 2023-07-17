@@ -600,6 +600,15 @@ iframe {
   margin: 0 auto 2em;
 }
 @media screen and (max-width: 34.5rem) {
+  .entry-content p:first-of-type span[itemtype="http://schema.org/Photograph"] {
+    display: block;
+    margin: 0 -20px;
+  }
+  .entry-content p:first-of-type .hatena-fotolife {
+    border-radius: 0;
+  }
+}
+@media screen and (max-width: 34.5rem) {
   .entry-content .full-width-image {
     margin: 0 -20px;
   }
