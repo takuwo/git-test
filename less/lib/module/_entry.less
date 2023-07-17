@@ -84,6 +84,18 @@
 .entry-content {
   margin: 0 auto 2em;
   // fotolife
+  @media @sp {
+    p:first-of-type {
+      span[itemtype="http://schema.org/Photograph"]
+      {
+        display: block;
+        margin: 0 -20px;
+      }
+      .hatena-fotolife {
+        border-radius: 0;
+      }
+    }
+  }
   .full-width-image {
     @media @sp {
       margin: 0 -20px;
