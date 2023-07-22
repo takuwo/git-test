@@ -1108,7 +1108,14 @@ a.archive-entry-tag-link svg path {
   margin-bottom: 0;
 }
 .page-archive .archive-entry .entry-thumb-link {
-  display: none;
+  display: block;
+}
+.page-archive .archive-entry .entry-thumb {
+  border-radius: 4px;
+  height: 90px;
+  width: 90px;
+  float: right;
+  margin: 2.5rem 0 0 1rem;
 }
 .page-archive .archive-entry .entry-description {
   display: -webkit-box;
